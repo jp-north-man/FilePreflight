@@ -113,20 +113,21 @@ select {
   position: relative;
   display: inline-grid;
   place-items: center;
+  flex: 0 0 auto;
   width: 30px;
-  aspect-ratio: 1;
+  height: 30px;
   border: 2px solid var(--amber);
-  border-radius: 10px 10px 13px 13px;
-  transform: rotate(45deg);
+  border-radius: 10px;
 }
 
 .brand-mark::before,
 .mini-mark::before {
   content: "";
-  width: 8px;
-  height: 11px;
+  width: 7px;
+  height: 12px;
   border-right: 2px solid var(--mint);
   border-bottom: 2px solid var(--mint);
+  transform: translateY(-2px) rotate(45deg);
 }
 
 .brand-mark span,
@@ -463,12 +464,14 @@ h1 span {
 
 .mini-mark {
   width: 23px;
-  border-radius: 7px 7px 9px 9px;
+  height: 23px;
+  border-radius: 7px;
 }
 
 .mini-mark::before {
-  width: 6px;
+  width: 5px;
   height: 8px;
+  transform: translateY(-1px) rotate(45deg);
 }
 
 .process-list {
@@ -632,9 +635,9 @@ h2 {
   content: "";
   position: absolute;
   top: 16px;
-  left: 18px;
-  width: 22px;
-  height: 27px;
+  left: 16px;
+  width: 24px;
+  height: 24px;
   border: 3px solid var(--blue);
   border-radius: 50%;
 }
@@ -642,30 +645,35 @@ h2 {
 .inspect-icon::after {
   content: "";
   position: absolute;
-  top: 42px;
-  left: 42px;
-  width: 15px;
+  top: 39px;
+  left: 39px;
+  width: 14px;
   height: 3px;
   background: var(--blue);
   border-radius: 3px;
   transform: rotate(45deg);
+  transform-origin: left center;
 }
 
 .remove-icon::before,
 .verify-icon::before {
   content: "";
   position: absolute;
-  inset: 15px 18px;
+  top: 50%;
+  left: 50%;
+  width: 28px;
+  height: 34px;
   border: 3px solid var(--amber);
   border-radius: 9px;
+  transform: translate(-50%, -50%);
 }
 
 .remove-icon::after {
   content: "";
   position: absolute;
-  top: 31px;
+  top: 28px;
   left: 24px;
-  width: 19px;
+  width: 18px;
   height: 3px;
   background: var(--mint);
   border-radius: 3px;
@@ -673,6 +681,8 @@ h2 {
 }
 
 .verify-icon::before {
+  width: 34px;
+  height: 34px;
   border-color: var(--mint);
   border-radius: 50%;
 }
@@ -680,13 +690,13 @@ h2 {
 .verify-icon::after {
   content: "";
   position: absolute;
-  top: 27px;
-  left: 26px;
-  width: 17px;
-  height: 9px;
+  top: 24px;
+  left: 29px;
+  width: 8px;
+  height: 14px;
+  border-right: 3px solid var(--mint);
   border-bottom: 3px solid var(--mint);
-  border-left: 3px solid var(--mint);
-  transform: rotate(-45deg);
+  transform: rotate(45deg);
 }
 
 .step-card h3 {
@@ -1022,7 +1032,14 @@ h2 {
 
 .footer-brand .brand-mark {
   width: 24px;
-  border-radius: 8px 8px 10px 10px;
+  height: 24px;
+  border-radius: 8px;
+}
+
+.footer-brand .brand-mark::before {
+  width: 5px;
+  height: 9px;
+  transform: translateY(-1px) rotate(45deg);
 }
 
 .footer-inner > p {
@@ -1100,6 +1117,7 @@ h2 {
 
   .brand-mark {
     width: 25px;
+    height: 25px;
   }
 
   .language-switch button {
