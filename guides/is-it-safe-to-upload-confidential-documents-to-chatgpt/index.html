@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="A decision framework for ChatGPT uploads covering workspace type, training controls, retention, administrator access, data minimisation, and document preparation." />
+  <meta name="theme-color" content="#0b1020" />
+  <meta name="robots" content="index, follow" />
+  <meta property="og:type" content="article" />
+  <meta property="og:site_name" content="FilePreflight" />
+  <meta property="og:title" content="Is It Safe to Upload Confidential Company Documents to ChatGPT?" />
+  <meta property="og:description" content="A decision framework for ChatGPT uploads covering workspace type, training controls, retention, administrator access, data minimisation, and document preparation." />
+  <meta property="og:url" content="https://filepreflight.ai-labs.co.jp/guides/is-it-safe-to-upload-confidential-documents-to-chatgpt/" />
+  <meta property="og:image" content="https://filepreflight.ai-labs.co.jp/og.png" />
+  <meta property="og:locale" content="en_US" />
+  <meta property="article:published_time" content="2026-08-19" />
+  <meta property="article:modified_time" content="2026-08-19" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Is It Safe to Upload Confidential Company Documents to ChatGPT?" />
+  <meta name="twitter:description" content="A decision framework for ChatGPT uploads covering workspace type, training controls, retention, administrator access, data minimisation, and document preparation." />
+  <meta name="twitter:image" content="https://filepreflight.ai-labs.co.jp/og.png" />
+  <link rel="canonical" href="https://filepreflight.ai-labs.co.jp/guides/is-it-safe-to-upload-confidential-documents-to-chatgpt/" />
+  <link rel="alternate" hreflang="en" href="https://filepreflight.ai-labs.co.jp/guides/is-it-safe-to-upload-confidential-documents-to-chatgpt/" />
+  <link rel="alternate" hreflang="x-default" href="https://filepreflight.ai-labs.co.jp/guides/is-it-safe-to-upload-confidential-documents-to-chatgpt/" />
+  <link rel="stylesheet" href="../../styles.css" />
+  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Article","headline":"Is It Safe to Upload Confidential Company Documents to ChatGPT?","description":"A decision framework for ChatGPT uploads covering workspace type, training controls, retention, administrator access, data minimisation, and document preparation.","datePublished":"2026-08-19","dateModified":"2026-08-19","inLanguage":"en","mainEntityOfPage":"https://filepreflight.ai-labs.co.jp/guides/is-it-safe-to-upload-confidential-documents-to-chatgpt/","author":{"@type":"Organization","name":"AI Labs LLC","url":"https://www.ai-labs.co.jp/"},"publisher":{"@type":"Organization","name":"AI Labs LLC","url":"https://www.ai-labs.co.jp/"},"citation":["https://openai.com/business-data/","https://help.openai.com/en/articles/8983130-how-does-chatgpt-use-my-data","https://help.openai.com/en/articles/8914046-temporary-chat-faq","https://help.openai.com/en/articles/8983778-chat-and-file-retention-policies-in-chatgpt","https://help.openai.com/en/articles/20001067-data-access-for-your-managed-chatgpt-account"]},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"FilePreflight","item":"https://filepreflight.ai-labs.co.jp/"},{"@type":"ListItem","position":2,"name":"Guides","item":"https://filepreflight.ai-labs.co.jp/guides/"},{"@type":"ListItem","position":3,"name":"Is It Safe to Upload Confidential Company Documents to ChatGPT?","item":"https://filepreflight.ai-labs.co.jp/guides/is-it-safe-to-upload-confidential-documents-to-chatgpt/"}]}]}</script>
+  <title>Is It Safe to Upload Confidential Company Documents to ChatGPT? | FilePreflight Guides</title>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="shell header-inner">
+    <a class="brand" href="../../" aria-label="FilePreflight home">
+      <span class="brand-mark" aria-hidden="true"><span></span></span><span>FilePreflight</span>
+    </a>
+    <nav class="desktop-nav" aria-label="Primary navigation">
+      <a href="../../">Product</a>
+      <a href="../../guides/">Guides</a>
+      <a href="../../#privacy">Privacy</a>
+      <a href="https://github.com/jp-north-man/FilePreflight" target="_blank" rel="noopener noreferrer">GitHub</a>
+    </nav>
+    <div class="language-switch" aria-label="Language">
+      <a href="../../ja/" lang="ja">日本語</a>
+      <a href="./" aria-current="page">EN</a>
+    </div>
+  </div>
+</header>
+  <main id="main">
+    <section class="guide-hero">
+      <div class="hero-glow hero-glow-one" aria-hidden="true"></div>
+      <div class="guide-hero-inner">
+        <nav class="breadcrumb" aria-label="Breadcrumb"><a href="../../">FilePreflight</a><span aria-hidden="true">/</span><a href="../">Guides</a><span aria-hidden="true">/</span><span>Confidential documents and ChatGPT</span></nav>
+        <p class="eyebrow light">ChatGPT privacy</p>
+        <h1>Is It Safe to Upload Confidential Company Documents to ChatGPT?</h1>
+        <p class="hero-lede">A decision framework for ChatGPT uploads covering workspace type, training controls, retention, administrator access, data minimisation, and document preparation.</p>
+        <div class="guide-meta"><span>Published August 19, 2026</span><span>8 min read</span><span>Reviewed against official sources</span></div>
+      </div>
+    </section>
+    <div class="guide-article-wrap">
+      <article class="guide-article">
+        <aside class="guide-summary"><strong>In brief</strong><p>There is no blanket yes or no. The answer depends on the ChatGPT product and workspace, current settings and contract, retention, administrator access, the document itself, and your organisation&#039;s policy.</p></aside>
+<aside class="guide-warning"><strong>Important boundary</strong><p>Not used for model training does not mean not stored. Temporary Chat is not the same as zero retention, and a managed workspace does not make every upload appropriate.</p></aside>
+<section><h2>Start with the workspace, not the brand name</h2><p>ChatGPT is offered through personal workspaces, managed business workspaces, and separate API services. They do not all use the same defaults or data lifecycle. Before considering a confidential file, identify the exact product, account, workspace, and feature that will receive it.</p>
+<p>OpenAI states that content from ChatGPT Business, Enterprise, Edu, Healthcare, Teachers, and its API is not used to train models by default. For a personal ChatGPT workspace, users can turn off model improvement in Data Controls. These are useful controls, but they answer only the training question.</p>
+<p>Storage is separate. OpenAI's retention documentation explains that chats remain until deleted in ordinary use, subject to stated deletion timelines and exceptions. Temporary Chats are not used for training or placed in history, but OpenAI says a copy may be kept for up to 30 days for safety purposes.</p></section>
+<section><h2>Five questions to answer before an upload</h2><ol><li><strong>Is this use approved?</strong> Check the organisation's AI, client, security, records, and sector-specific rules.</li><li><strong>Which workspace receives it?</strong> Confirm whether it is personal or managed and whether a contract governs business data.</li><li><strong>Who can access it?</strong> Managed-account administrators may be able to access, audit, retain, or delete account data depending on configuration and law.</li><li><strong>How long can it remain?</strong> Review chat, file, library, and temporary-chat retention separately.</li><li><strong>Does a feature send data onward?</strong> Actions, connectors, or other third-party integrations can apply a different recipient's privacy terms.</li></ol>
+<p>If any answer is unknown, stop before uploading. A useful AI result rarely requires the whole source document while those questions are unresolved.</p></section>
+<section><h2>Classify the content in the file</h2><p>Confidential company documents often combine several risk types: personal data, customer terms, forecasts, credentials, legal advice, trade secrets, or information received under a nondisclosure agreement. Removing names alone does not address all of them.</p>
+<div class="guide-table-wrap"><table class="guide-table"><thead><tr><th>Question</th><th>Safer response</th></tr></thead><tbody><tr><td>Does AI need the complete file?</td><td>Extract only the relevant pages, rows, or paragraphs.</td></tr><tr><td>Must identities remain?</td><td>Use consistent placeholders such as Customer A and Project B.</td></tr><tr><td>Are exact values required?</td><td>Round, bucket, or replace values when precision is unnecessary.</td></tr><tr><td>Could context re-identify the subject?</td><td>Generalise dates, locations, roles, and rare details together.</td></tr><tr><td>Does the file contain hidden data?</td><td>Inspect comments, changes, properties, attachments, and format-specific objects.</td></tr></tbody></table></div></section>
+<section><h2>A practical decision rule</h2><p>Use three independent gates. First, the destination must be approved. Second, the copy must contain only the information needed for the stated task. Third, a person responsible for the data must review the exact output. Passing one gate does not compensate for failing another.</p>
+<p>For example, a business workspace with training disabled by default can still be the wrong place for a privileged legal memo if policy prohibits the use. Conversely, a permitted use can still be careless if the complete workbook is uploaded when a small synthetic table would answer the question.</p>
+<p>When the consequence of disclosure is high, consider a synthetic example, an internally hosted model, an approved API configuration, or no upload at all. The correct outcome of a preflight review is sometimes to stop.</p></section>
+        <section class="guide-sources">
+          <h2>Official sources</h2>
+          <p class="guide-disclosure">This guide uses primary sources available on August 19, 2026. Product policies and software features can change, so confirm current terms before handling sensitive material.</p>
+          <ul><li><a href="https://openai.com/business-data/" target="_blank" rel="noopener noreferrer">Business data privacy, security, and compliance</a> — OpenAI</li>
+<li><a href="https://help.openai.com/en/articles/8983130-how-does-chatgpt-use-my-data" target="_blank" rel="noopener noreferrer">How does ChatGPT use my data?</a> — OpenAI Help Center</li>
+<li><a href="https://help.openai.com/en/articles/8914046-temporary-chat-faq" target="_blank" rel="noopener noreferrer">Temporary Chat FAQ</a> — OpenAI Help Center</li>
+<li><a href="https://help.openai.com/en/articles/8983778-chat-and-file-retention-policies-in-chatgpt" target="_blank" rel="noopener noreferrer">Chat and file retention policies in ChatGPT</a> — OpenAI Help Center</li>
+<li><a href="https://help.openai.com/en/articles/20001067-data-access-for-your-managed-chatgpt-account" target="_blank" rel="noopener noreferrer">Data access for your managed ChatGPT account</a> — OpenAI Help Center</li></ul>
+        </section>
+        <aside class="guide-note"><strong>About FilePreflight</strong><p>FilePreflight is a Windows file-preparation product being developed by AI Labs LLC. The initial release is not yet available. Planned capabilities and limits may change, and automated detection remains best-effort.</p></aside>
+<nav class="guide-pagination" aria-label="Guide navigation">
+<a href="../ai-document-sanitizer/">← AI document sanitizer</a>
+<a href="../redact-sensitive-information-before-chatgpt/">Redact before ChatGPT →</a>
+</nav>
+      </article>
+    </div>
+  </main>
+<footer class="site-footer">
+  <div class="shell footer-inner">
+    <a class="brand footer-brand" href="../../"><span class="brand-mark" aria-hidden="true"><span></span></span><span>FilePreflight</span></a>
+    <p>© 2026 FilePreflight</p>
+    <div class="footer-links">
+      <a href="../../#privacy">Privacy</a>
+      <a href="../../guides/">Guides</a>
+      <a href="https://github.com/jp-north-man/FilePreflight" target="_blank" rel="noopener noreferrer">GitHub</a>
+      <a href="https://www.ai-labs.co.jp/products/filepreflight">Developed by AI Labs LLC</a>
+    </div>
+  </div>
+</footer>
+</body>
+</html>

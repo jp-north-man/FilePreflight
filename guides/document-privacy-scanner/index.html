@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="How to assess scanner coverage, evidence, false negatives, format support, remediation, rechecking, and the meaning of a no-findings result." />
+  <meta name="theme-color" content="#0b1020" />
+  <meta name="robots" content="index, follow" />
+  <meta property="og:type" content="article" />
+  <meta property="og:site_name" content="FilePreflight" />
+  <meta property="og:title" content="Document Privacy Scanner for AI Uploads: What a Useful Scan Should Show" />
+  <meta property="og:description" content="How to assess scanner coverage, evidence, false negatives, format support, remediation, rechecking, and the meaning of a no-findings result." />
+  <meta property="og:url" content="https://filepreflight.ai-labs.co.jp/guides/document-privacy-scanner/" />
+  <meta property="og:image" content="https://filepreflight.ai-labs.co.jp/og.png" />
+  <meta property="og:locale" content="en_US" />
+  <meta property="article:published_time" content="2026-08-19" />
+  <meta property="article:modified_time" content="2026-08-19" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Document Privacy Scanner for AI Uploads: What a Useful Scan Should Show" />
+  <meta name="twitter:description" content="How to assess scanner coverage, evidence, false negatives, format support, remediation, rechecking, and the meaning of a no-findings result." />
+  <meta name="twitter:image" content="https://filepreflight.ai-labs.co.jp/og.png" />
+  <link rel="canonical" href="https://filepreflight.ai-labs.co.jp/guides/document-privacy-scanner/" />
+  <link rel="alternate" hreflang="en" href="https://filepreflight.ai-labs.co.jp/guides/document-privacy-scanner/" />
+  <link rel="alternate" hreflang="x-default" href="https://filepreflight.ai-labs.co.jp/guides/document-privacy-scanner/" />
+  <link rel="stylesheet" href="../../styles.css" />
+  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Article","headline":"Document Privacy Scanner for AI Uploads: What a Useful Scan Should Show","description":"How to assess scanner coverage, evidence, false negatives, format support, remediation, rechecking, and the meaning of a no-findings result.","datePublished":"2026-08-19","dateModified":"2026-08-19","inLanguage":"en","mainEntityOfPage":"https://filepreflight.ai-labs.co.jp/guides/document-privacy-scanner/","author":{"@type":"Organization","name":"AI Labs LLC","url":"https://www.ai-labs.co.jp/"},"publisher":{"@type":"Organization","name":"AI Labs LLC","url":"https://www.ai-labs.co.jp/"},"citation":["https://support.microsoft.com/en-US/Office/collab-files/remove-hidden-data-and-personal-information-by-inspecting-documents-presentations-or-workbooks","https://docs.github.com/en/code-security/reference/secret-security/secret-scanning-scope","https://www.nist.gov/publications/de-identifying-government-datasets-techniques-and-governance","https://helpx.adobe.com/acrobat/desktop/protect-documents/redact-pdfs/sanitize.html"]},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"FilePreflight","item":"https://filepreflight.ai-labs.co.jp/"},{"@type":"ListItem","position":2,"name":"Guides","item":"https://filepreflight.ai-labs.co.jp/guides/"},{"@type":"ListItem","position":3,"name":"Document Privacy Scanner for AI Uploads: What a Useful Scan Should Show","item":"https://filepreflight.ai-labs.co.jp/guides/document-privacy-scanner/"}]}]}</script>
+  <title>Document Privacy Scanner for AI Uploads: What a Useful Scan Should Show | FilePreflight Guides</title>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="shell header-inner">
+    <a class="brand" href="../../" aria-label="FilePreflight home">
+      <span class="brand-mark" aria-hidden="true"><span></span></span><span>FilePreflight</span>
+    </a>
+    <nav class="desktop-nav" aria-label="Primary navigation">
+      <a href="../../">Product</a>
+      <a href="../../guides/">Guides</a>
+      <a href="../../#privacy">Privacy</a>
+      <a href="https://github.com/jp-north-man/FilePreflight" target="_blank" rel="noopener noreferrer">GitHub</a>
+    </nav>
+    <div class="language-switch" aria-label="Language">
+      <a href="../../ja/" lang="ja">日本語</a>
+      <a href="./" aria-current="page">EN</a>
+    </div>
+  </div>
+</header>
+  <main id="main">
+    <section class="guide-hero">
+      <div class="hero-glow hero-glow-one" aria-hidden="true"></div>
+      <div class="guide-hero-inner">
+        <nav class="breadcrumb" aria-label="Breadcrumb"><a href="../../">FilePreflight</a><span aria-hidden="true">/</span><a href="../">Guides</a><span aria-hidden="true">/</span><span>Document privacy scanner</span></nav>
+        <p class="eyebrow light">Evaluation</p>
+        <h1>Document Privacy Scanner for AI Uploads: What a Useful Scan Should Show</h1>
+        <p class="hero-lede">How to assess scanner coverage, evidence, false negatives, format support, remediation, rechecking, and the meaning of a no-findings result.</p>
+        <div class="guide-meta"><span>Published August 19, 2026</span><span>7 min read</span><span>Reviewed against official sources</span></div>
+      </div>
+    </section>
+    <div class="guide-article-wrap">
+      <article class="guide-article">
+        <aside class="guide-summary"><strong>In brief</strong><p>A useful scanner reports findings within a documented scope, distinguishes detected from removable items, exposes unsupported areas, and supports a review workflow. A no-findings result is not proof of safety.</p></aside>
+<aside class="guide-warning"><strong>Important boundary</strong><p>Scanner quality cannot be judged by the number of risk categories in a marketing page. Ask for format-specific coverage, synthetic test fixtures, known limitations, and output verification.</p></aside>
+<section><h2>A scanner is decision support</h2><p>A document privacy scanner can find supported patterns and file structures: an email address in text, a known API-key format, an Office author property, a hidden worksheet, or a PDF attachment. The result tells a reviewer where to look and what the tool can attempt to remove.</p>
+<p>It cannot prove the absence of confidential content. The same phrase can be sensitive in one organisation and harmless in another, while a combination of ordinary details can identify a customer without matching any individual pattern.</p>
+<p>Report language should preserve that distinction. <em>No supported findings detected</em> is accurate. <em>Safe to upload</em> overstates what a scan alone establishes.</p></section>
+<section><h2>Coverage should be format-specific</h2><div class="guide-table-wrap"><table class="guide-table"><thead><tr><th>Status</th><th>Meaning</th><th>Example</th></tr></thead><tbody><tr><td>Detected and removable</td><td>The tool can locate the item and has a tested transformation</td><td>Supported author property in a DOCX copy</td></tr><tr><td>Detected, manual action</td><td>The tool can report the item but cannot safely transform it</td><td>A workbook dependency that needs owner review</td></tr><tr><td>Best-effort detection</td><td>Coverage varies with content quality or structure</td><td>OCR text in a low-quality scan</td></tr><tr><td>Unsupported</td><td>The item or format is outside tested scope</td><td>A proprietary embedded object</td></tr><tr><td>Manual review</td><td>Automation cannot determine business sensitivity</td><td>A unique project fact or contractual restriction</td></tr></tbody></table></div>
+<p>A single label for PDF, DOCX, XLSX, PPTX, image, text, and configuration files hides important differences. Each format has distinct structures, parsing failure modes, and removal methods.</p></section>
+<section><h2>Ask how the scanner was tested</h2><p>Good evidence includes synthetic files containing one known risk at a time, mixed-risk files, corrupted inputs, unusual encodings, and before-and-after verification. Tests should cover both positive detection and false-positive handling.</p>
+<p>A zero-network test is relevant for a local-processing claim. A reopen test is relevant for file integrity. A second scan of the output is relevant for removal. None replaces a human review, but each supports a specific claim.</p>
+<p>GitHub's secret-scanning documentation illustrates why scope matters: detection depends on supported patterns, object type, size, and other limits. Document scanners face analogous boundaries across text, OCR, embedded objects, and metadata.</p></section>
+<section><h2>Look for explainable findings</h2><p>A finding should identify the category, location, evidence safely enough for review, confidence or rule basis, available action, and any effect of that action. The report should avoid writing a live secret into logs or telemetry.</p>
+<p>Reviewers also need a way to distinguish a true finding from a false positive and to add organisation-specific terms or patterns. A generic scanner cannot know every internal customer code, project nickname, or proprietary identifier.</p>
+<p>Removal should be reversible only through the preserved original, not through hidden content in the output. The output needs a clear path, a non-overwrite policy, and failure behaviour that does not silently publish a partial result.</p></section>
+<section><h2>A scanner acceptance checklist</h2><ul><li>Supported formats and maximum sizes are explicit.</li><li>Detection, removal, unsupported, and manual-review items are separated.</li><li>Known blind spots are published in plain language.</li><li>The original is preserved and failures are fail-closed.</li><li>Local-processing claims have testable boundaries.</li><li>Outputs are reopened and scanned again.</li><li>Reports do not expose the sensitive values they describe.</li><li>No-findings language is qualified.</li><li>Users can complete a final human review.</li></ul></section>
+        <section class="guide-sources">
+          <h2>Official sources</h2>
+          <p class="guide-disclosure">This guide uses primary sources available on August 19, 2026. Product policies and software features can change, so confirm current terms before handling sensitive material.</p>
+          <ul><li><a href="https://support.microsoft.com/en-US/Office/collab-files/remove-hidden-data-and-personal-information-by-inspecting-documents-presentations-or-workbooks" target="_blank" rel="noopener noreferrer">Remove hidden data and personal information with Document Inspector</a> — Microsoft Support</li>
+<li><a href="https://docs.github.com/en/code-security/reference/secret-security/secret-scanning-scope" target="_blank" rel="noopener noreferrer">Secret scanning scope</a> — GitHub Docs</li>
+<li><a href="https://www.nist.gov/publications/de-identifying-government-datasets-techniques-and-governance" target="_blank" rel="noopener noreferrer">SP 800-188: De-Identifying Government Datasets</a> — NIST</li>
+<li><a href="https://helpx.adobe.com/acrobat/desktop/protect-documents/redact-pdfs/sanitize.html" target="_blank" rel="noopener noreferrer">Sanitize PDFs</a> — Adobe Help Center</li></ul>
+        </section>
+        <aside class="guide-note"><strong>About FilePreflight</strong><p>FilePreflight is a Windows file-preparation product being developed by AI Labs LLC. The initial release is not yet available. Planned capabilities and limits may change, and automated detection remains best-effort.</p></aside>
+<nav class="guide-pagination" aria-label="Guide navigation">
+<a href="../redact-sanitize-pdf-before-chatgpt/">← Redact and sanitize a PDF</a>
+<a href="../best-offline-document-redaction-tools/">Offline redaction tools →</a>
+</nav>
+      </article>
+    </div>
+  </main>
+<footer class="site-footer">
+  <div class="shell footer-inner">
+    <a class="brand footer-brand" href="../../"><span class="brand-mark" aria-hidden="true"><span></span></span><span>FilePreflight</span></a>
+    <p>© 2026 FilePreflight</p>
+    <div class="footer-links">
+      <a href="../../#privacy">Privacy</a>
+      <a href="../../guides/">Guides</a>
+      <a href="https://github.com/jp-north-man/FilePreflight" target="_blank" rel="noopener noreferrer">GitHub</a>
+      <a href="https://www.ai-labs.co.jp/products/filepreflight">Developed by AI Labs LLC</a>
+    </div>
+  </div>
+</footer>
+</body>
+</html>

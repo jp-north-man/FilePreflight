@@ -1,59 +1,65 @@
 <!doctype html>
-<html lang="ja" data-language="ja">
+<html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta
-      name="description"
-      content="FilePreflightは、AIへ共有する前のファイルから対応する重要情報を除去し、再検査済みの安全なコピーを完全ローカルで作成するWindowsアプリです。"
-    />
+    <meta name="description" content="FilePreflight prepares a cleaner copy of supported files before AI upload by inspecting, removing selected findings, and rechecking locally on Windows." />
     <meta name="theme-color" content="#0b1020" />
     <meta name="robots" content="index, follow" />
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="FilePreflight" />
-    <meta property="og:title" content="FilePreflight — AIへ渡す前の、安全なコピー" />
-    <meta
-      property="og:description"
-      content="重要情報をローカルで検査・除去・再検査。原本を上書きせず、AIへ共有するための安全なコピーを作成します。"
-    />
-    <meta property="og:url" content="https://jp-north-man.github.io/FilePreflight/" />
-    <meta
-      property="og:image"
-      content="https://jp-north-man.github.io/FilePreflight/og.png"
-    />
+    <meta property="og:title" content="FilePreflight — Local file preparation before AI upload" />
+    <meta property="og:description" content="Inspect supported sensitive information, remove selected findings, and recheck a copy locally before sharing it with AI." />
+    <meta property="og:url" content="https://filepreflight.ai-labs.co.jp/" />
+    <meta property="og:image" content="https://filepreflight.ai-labs.co.jp/og.png" />
+    <meta property="og:locale" content="en_US" />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="FilePreflight — AIへ渡す前の、安全なコピー" />
-    <meta
-      name="twitter:description"
-      content="重要情報をローカルで検査・除去・再検査。原本を上書きしません。"
-    />
-    <meta
-      name="twitter:image"
-      content="https://jp-north-man.github.io/FilePreflight/og.png"
-    />
-    <link rel="canonical" href="https://jp-north-man.github.io/FilePreflight/" />
+    <meta name="twitter:title" content="FilePreflight — Local file preparation before AI upload" />
+    <meta name="twitter:description" content="Inspect, remove, and recheck supported risks locally before sharing a file with AI." />
+    <meta name="twitter:image" content="https://filepreflight.ai-labs.co.jp/og.png" />
+    <link rel="canonical" href="https://filepreflight.ai-labs.co.jp/" />
+    <link rel="alternate" hreflang="en" href="https://filepreflight.ai-labs.co.jp/" />
+    <link rel="alternate" hreflang="ja" href="https://filepreflight.ai-labs.co.jp/ja/" />
+    <link rel="alternate" hreflang="x-default" href="https://filepreflight.ai-labs.co.jp/" />
     <link rel="stylesheet" href="styles.css" />
-    <script src="site.js" defer></script>
-    <title>FilePreflight — AIへ渡す前の、安全なコピー</title>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "FilePreflight",
+        "url": "https://filepreflight.ai-labs.co.jp/",
+        "description": "A Windows application that locally inspects supported files, removes selected findings, and rechecks the output before AI upload.",
+        "applicationCategory": "SecurityApplication",
+        "operatingSystem": "Windows",
+        "inLanguage": "en",
+        "creator": {
+          "@type": "Organization",
+          "name": "AI Labs LLC",
+          "url": "https://www.ai-labs.co.jp/"
+        }
+      }
+    </script>
+    <title>FilePreflight — Local file preparation before AI upload</title>
   </head>
   <body>
-    <a class="skip-link" href="#main" data-i18n="skipLink">本文へ移動</a>
+    <a class="skip-link" href="#main">Skip to content</a>
 
     <header class="site-header">
       <div class="shell header-inner">
-        <a class="brand" href="#top" aria-label="FilePreflight home">
+        <a class="brand" href="./" aria-label="FilePreflight home">
           <span class="brand-mark" aria-hidden="true"><span></span></span>
           <span>FilePreflight</span>
         </a>
         <nav class="desktop-nav" aria-label="Primary navigation">
-          <a href="#how" data-i18n="navHow">仕組み</a>
-          <a href="#formats" data-i18n="navFormats">対応形式</a>
-          <a href="#pricing" data-i18n="navPricing">料金</a>
-          <a href="#privacy" data-i18n="navPrivacy">プライバシー</a>
+          <a href="#how">How it works</a>
+          <a href="#formats">Formats</a>
+          <a href="#pricing">Pricing</a>
+          <a href="guides/">Guides</a>
+          <a href="#privacy">Privacy</a>
         </nav>
         <div class="language-switch" aria-label="Language">
-          <button type="button" data-language-option="ja" aria-pressed="true">日本語</button>
-          <button type="button" data-language-option="en" aria-pressed="false">EN</button>
+          <a href="ja/" lang="ja">日本語</a>
+          <a href="./" aria-current="page">EN</a>
         </div>
       </div>
     </header>
@@ -64,29 +70,22 @@
         <div class="hero-glow hero-glow-two" aria-hidden="true"></div>
         <div class="shell hero-grid">
           <div class="hero-copy">
-            <p class="eyebrow" data-i18n="heroEyebrow">Windows向け・ファイル処理は完全ローカル</p>
+            <p class="eyebrow">For Windows · File processing stays local</p>
             <h1>
-              <span data-i18n="heroTitleOne">AIに渡す前に、</span>
-              <span class="accent-text" data-i18n="heroTitleTwo">重要情報だけを除去。</span>
+              <span>Before you upload to AI,</span>
+              <span class="accent-text">prepare a cleaner copy.</span>
             </h1>
-            <p class="hero-lede" data-i18n="heroLede">
-              FilePreflightは、対応する重要情報を検査・除去し、出力を再び開いて再検査してから、安全なコピーとして保存します。ファイル内容は端末の外へ送りません。
+            <p class="hero-lede">
+              FilePreflight inspects supported sensitive information, removes selected findings, then reopens and scans the output again on your Windows PC. Detection is best-effort, so you stay in control of the final review.
             </p>
             <div class="hero-actions">
-              <a class="button button-primary" href="#how" data-i18n="heroPrimary">仕組みを見る</a>
-              <a
-                class="button button-secondary"
-                href="https://github.com/jp-north-man/FilePreflight"
-                target="_blank"
-                rel="noopener noreferrer"
-                data-i18n="heroSecondary"
-                >公式GitHubを見る</a
-              >
+              <a class="button button-primary" href="#how">See how it works</a>
+              <a class="button button-secondary" href="guides/">Read the guides</a>
             </div>
-            <ul class="trust-list" aria-label="Product guarantees">
-              <li><span aria-hidden="true">✓</span><span data-i18n="trustLocal">完全ローカル処理</span></li>
-              <li><span aria-hidden="true">✓</span><span data-i18n="trustOriginal">原本を上書きしない</span></li>
-              <li><span aria-hidden="true">✓</span><span data-i18n="trustAccount">アカウント不要</span></li>
+            <ul class="trust-list" aria-label="Product principles">
+              <li><span aria-hidden="true">✓</span><span>Local file processing</span></li>
+              <li><span aria-hidden="true">✓</span><span>Never overwrites the original</span></li>
+              <li><span aria-hidden="true">✓</span><span>No account required</span></li>
             </ul>
           </div>
 
@@ -99,33 +98,24 @@
               <div class="file-row">
                 <span class="file-icon" aria-hidden="true"></span>
                 <div>
-                  <strong data-i18n="previewFile">顧客レビュー.pdf</strong>
-                  <span data-i18n="previewAction">右クリック → FilePreflight</span>
+                  <strong>customer-review.pdf</strong>
+                  <span>Right click → FilePreflight</span>
                 </div>
               </div>
               <div class="safe-copy-command">
                 <span class="mini-mark" aria-hidden="true"></span>
-                <span data-i18n="previewCommand">安全なコピーを作成</span>
+                <span>Create a cleaner copy</span>
                 <span aria-hidden="true">›</span>
               </div>
             </div>
             <ol class="process-list">
-              <li class="done">
-                <span class="step-state" aria-hidden="true">✓</span>
-                <div><strong data-i18n="previewInspect">検査</strong><small data-i18n="previewInspectSub">対応する重要情報を確認</small></div>
-              </li>
-              <li class="done">
-                <span class="step-state" aria-hidden="true">✓</span>
-                <div><strong data-i18n="previewRemove">除去</strong><small data-i18n="previewRemoveSub">ポリシーに従って安全に変換</small></div>
-              </li>
-              <li class="active">
-                <span class="step-state" aria-hidden="true"></span>
-                <div><strong data-i18n="previewVerify">再検査</strong><small data-i18n="previewVerifySub">再オープンして出力を検証</small></div>
-              </li>
+              <li class="done"><span class="step-state" aria-hidden="true">✓</span><div><strong>Inspect</strong><small>Find supported sensitive information</small></div></li>
+              <li class="done"><span class="step-state" aria-hidden="true">✓</span><div><strong>Remove</strong><small>Transform according to policy</small></div></li>
+              <li class="active"><span class="step-state" aria-hidden="true"></span><div><strong>Recheck</strong><small>Reopen and scan the output</small></div></li>
             </ol>
             <div class="output-row">
-              <span class="status-pill"><span aria-hidden="true">✓</span><span data-i18n="previewSafe">検証済み</span></span>
-              <span data-i18n="previewOutput">顧客レビュー-SAFE.pdf</span>
+              <span class="status-pill"><span aria-hidden="true">✓</span><span>Rechecked</span></span>
+              <span>customer-review-SAFE.pdf</span>
             </div>
           </div>
         </div>
@@ -134,28 +124,25 @@
       <section class="section" id="how">
         <div class="shell">
           <div class="section-heading">
-            <p class="eyebrow" data-i18n="howEyebrow">シンプルな操作、厳密な処理</p>
-            <h2 data-i18n="howTitle">右クリックから、安全なコピーまで。</h2>
-            <p data-i18n="howLede">原本には触れず、公開前の検証を最後まで完了したコピーだけを保存します。</p>
+            <p class="eyebrow">Simple action, careful processing</p>
+            <h2>From right click to a rechecked copy.</h2>
+            <p>The original remains untouched. The output is reopened and scanned again before FilePreflight saves it.</p>
           </div>
           <div class="steps-grid">
             <article class="step-card">
-              <span class="step-number">01</span>
-              <div class="step-icon inspect-icon" aria-hidden="true"></div>
-              <h3 data-i18n="stepOneTitle">検査する</h3>
-              <p data-i18n="stepOneBody">形式を内容から確認し、選択したポリシーで対応する個人情報・認証情報・文書メタデータなどを探します。</p>
+              <span class="step-number">01</span><div class="step-icon inspect-icon" aria-hidden="true"></div>
+              <h3>Inspect</h3>
+              <p>Identify the real format from content, then look for supported personal data, credentials, document metadata, and other selected risks.</p>
             </article>
             <article class="step-card featured">
-              <span class="step-number">02</span>
-              <div class="step-icon remove-icon" aria-hidden="true"></div>
-              <h3 data-i18n="stepTwoTitle">除去・変換する</h3>
-              <p data-i18n="stepTwoBody">検出した対象を形式に適した方法で処理します。元ファイルのバイトとメタデータは変更しません。</p>
+              <span class="step-number">02</span><div class="step-icon remove-icon" aria-hidden="true"></div>
+              <h3>Remove and transform</h3>
+              <p>Handle each selected finding with a method appropriate to the file format. The original file remains unchanged.</p>
             </article>
             <article class="step-card">
-              <span class="step-number">03</span>
-              <div class="step-icon verify-icon" aria-hidden="true"></div>
-              <h3 data-i18n="stepThreeTitle">再検査する</h3>
-              <p data-i18n="stepThreeBody">出力を新しい処理環境で再び開き、対象が残っていないこととファイルが開けることを確認してから保存します。</p>
+              <span class="step-number">03</span><div class="step-icon verify-icon" aria-hidden="true"></div>
+              <h3>Reopen and recheck</h3>
+              <p>Open the output in a fresh worker, confirm that it is readable, and scan it again before saving the copy.</p>
             </article>
           </div>
         </div>
@@ -163,16 +150,11 @@
 
       <section class="section privacy-band" aria-labelledby="local-title">
         <div class="shell privacy-grid">
-          <div>
-            <p class="eyebrow light" data-i18n="localEyebrow">Privacy by architecture</p>
-            <h2 id="local-title" data-i18n="localTitle">ファイルは、あなたのPCから出ません。</h2>
-          </div>
+          <div><p class="eyebrow light">Privacy by architecture</p><h2 id="local-title">Your files stay on your PC.</h2></div>
           <div class="privacy-points">
-            <p data-i18n="localBody">ファイル内容、抽出テキスト、OCR結果、検出した秘密情報、派生データをクラウドへ送信しません。</p>
+            <p>File content, extracted content, OCR text, detected secrets, and derived file data are not sent to the cloud for processing.</p>
             <div class="data-flow" aria-label="Local processing flow">
-              <span data-i18n="flowInput">元ファイル</span><span aria-hidden="true">→</span>
-              <span class="flow-device" data-i18n="flowDevice">この端末内で処理</span><span aria-hidden="true">→</span>
-              <span data-i18n="flowOutput">安全なコピー</span>
+              <span>Original file</span><span aria-hidden="true">→</span><span class="flow-device">Processed on this device</span><span aria-hidden="true">→</span><span>Rechecked copy</span>
             </div>
           </div>
         </div>
@@ -181,27 +163,15 @@
       <section class="section" id="formats">
         <div class="shell formats-layout">
           <div class="section-heading aligned-left">
-            <p class="eyebrow" data-i18n="formatsEyebrow">初回Windowsリリース</p>
-            <h2 data-i18n="formatsTitle">日常で使う17拡張子に対応。</h2>
-            <p data-i18n="formatsLede">FreeとProで対応形式と1ファイル当たりの処理品質は同じです。</p>
+            <p class="eyebrow">Planned initial Windows release</p>
+            <h2>17 everyday file extensions.</h2>
+            <p>Free and Pro are planned to support the same launch formats with the same per-file processing quality.</p>
           </div>
           <div class="format-groups">
-            <div class="format-group">
-              <strong data-i18n="formatDocs">文書・Office</strong>
-              <div class="chips"><span>.pdf</span><span>.docx</span><span>.xlsx</span><span>.pptx</span></div>
-            </div>
-            <div class="format-group">
-              <strong data-i18n="formatImages">画像</strong>
-              <div class="chips"><span>.jpg</span><span>.jpeg</span><span>.png</span></div>
-            </div>
-            <div class="format-group">
-              <strong data-i18n="formatText">テキスト</strong>
-              <div class="chips"><span>.txt</span><span>.md</span><span>.markdown</span><span>.log</span></div>
-            </div>
-            <div class="format-group">
-              <strong data-i18n="formatData">データ・設定</strong>
-              <div class="chips"><span>.csv</span><span>.json</span><span>.xml</span><span>.yaml</span><span>.yml</span><span>.env</span></div>
-            </div>
+            <div class="format-group"><strong>Documents &amp; Office</strong><div class="chips"><span>.pdf</span><span>.docx</span><span>.xlsx</span><span>.pptx</span></div></div>
+            <div class="format-group"><strong>Images</strong><div class="chips"><span>.jpg</span><span>.jpeg</span><span>.png</span></div></div>
+            <div class="format-group"><strong>Text</strong><div class="chips"><span>.txt</span><span>.md</span><span>.markdown</span><span>.log</span></div></div>
+            <div class="format-group"><strong>Data &amp; config</strong><div class="chips"><span>.csv</span><span>.json</span><span>.xml</span><span>.yaml</span><span>.yml</span><span>.env</span></div></div>
           </div>
         </div>
       </section>
@@ -209,99 +179,67 @@
       <section class="section pricing-section" id="pricing">
         <div class="shell">
           <div class="section-heading">
-            <p class="eyebrow" data-i18n="pricingEyebrow">わかりやすい買い切り</p>
-            <h2 data-i18n="pricingTitle">品質ではなく、作業量で選ぶ。</h2>
-            <p data-i18n="pricingLede">Freeにも広告・透かし・品質制限はありません。Proは容量と一括処理、カスタマイズを広げます。</p>
+            <p class="eyebrow">Planned perpetual pricing</p>
+            <h2>Choose by workload, not quality.</h2>
+            <p>Free is planned without ads, watermarks, or quality reduction. Pro expands capacity, batching, and control.</p>
           </div>
           <div class="pricing-grid">
             <article class="price-card">
-              <div class="plan-head">
-                <div><p class="plan-name">Free</p><p class="plan-note" data-i18n="freeNote">永久無料</p></div>
-                <p class="price"><span>$</span>0</p>
-              </div>
-              <ul class="feature-list">
-                <li data-i18n="freeFeatureOne">1回1ファイル</li>
-                <li data-i18n="freeFeatureTwo">最大10 MB（10,000,000 bytes）</li>
-                <li data-i18n="freeFeatureThree">全17拡張子</li>
-                <li data-i18n="freeFeatureFour">右クリック安全コピー</li>
-                <li data-i18n="freeFeatureFive">商用利用可・台数制限なし</li>
-              </ul>
-              <div class="plan-status" data-i18n="freeStatus">Windows Store公開準備中</div>
+              <div class="plan-head"><div><p class="plan-name">Free</p><p class="plan-note">Free forever</p></div><p class="price"><span>$</span>0</p></div>
+              <ul class="feature-list"><li>One file per operation</li><li>Up to 10 MB (10,000,000 bytes)</li><li>All 17 launch extensions</li><li>Explorer right-click workflow</li><li>Commercial use · Unlimited devices</li></ul>
+              <div class="plan-status">Preparing for the Microsoft Store</div>
             </article>
-
             <article class="price-card pro-card">
-              <div class="recommended" data-i18n="proBadge">買い切り</div>
-              <div class="plan-head">
-                <div><p class="plan-name">Pro</p><p class="plan-note" data-i18n="proNote">サブスクなし</p></div>
-                <p class="price"><span>$</span>29<small data-i18n="once">一度だけ</small></p>
-              </div>
-              <ul class="feature-list">
-                <li data-i18n="proFeatureOne">単一・フォルダ・バッチ処理</li>
-                <li data-i18n="proFeatureTwo">最大20 GB（形式・資源制限による）</li>
-                <li data-i18n="proFeatureThree">保存先を選択可能</li>
-                <li data-i18n="proFeatureFour">カスタムポリシー</li>
-                <li data-i18n="proFeatureFive">1ユーザー・3台</li>
-              </ul>
-              <div class="plan-status pro-status" data-i18n="proStatus">決済準備中</div>
+              <div class="recommended">Perpetual</div>
+              <div class="plan-head"><div><p class="plan-name">Pro</p><p class="plan-note">No subscription</p></div><p class="price"><span>$</span>29<small>once</small></p></div>
+              <ul class="feature-list"><li>Single, folder, and batch processing</li><li>Up to 20 GB (format and resource limits apply)</li><li>Select an output destination</li><li>Custom policies</li><li>1 user · 3 devices</li></ul>
+              <div class="plan-status pro-status">Checkout coming soon</div>
             </article>
           </div>
-          <p class="quality-note" data-i18n="qualityNote">両プランともアカウント不要。検査品質、変換品質、1ファイル当たりの速度、再検査、原本保護は同一です。</p>
+          <p class="quality-note">The initial release and checkout are still in preparation. Published features, limits, and pricing may change before release.</p>
         </div>
       </section>
 
       <section class="section" id="privacy">
         <div class="shell legal-grid">
-          <div class="section-heading aligned-left">
-            <p class="eyebrow" data-i18n="trustEyebrow">透明性</p>
-            <h2 data-i18n="trustTitle">共有する前に、知っておいてほしいこと。</h2>
-          </div>
+          <div class="section-heading aligned-left"><p class="eyebrow">Transparency</p><h2>What to know before you share.</h2></div>
           <div class="legal-cards">
             <details open>
-              <summary data-i18n="privacyTitle">プライバシー</summary>
-              <p data-i18n="privacyBodyOne">アプリのファイル処理は端末内で完結します。ファイル内容、抽出内容、OCRテキスト、検出内容を外部へ送信しません。</p>
-              <p data-i18n="privacyBodyTwo">Proの購入・有効化では、決済・ライセンスに必要な情報だけを処理します。ファイル由来の情報やハードウェア指紋は含めません。このサイトは解析・広告Cookieを使用しません。</p>
+              <summary>Privacy</summary>
+              <p>App file processing is designed to happen on the device. File content, extracted content, OCR text, and detected findings are not transmitted externally for processing.</p>
+              <p>Pro purchase and activation will process only information required for payment and licensing. This site uses no analytics or advertising cookies.</p>
+            </details>
+            <details id="limitations">
+              <summary>Detection limits</summary>
+              <p>Automated detection is best-effort. Results depend on the file structure, selected policy, supported format, and supported rules. FilePreflight cannot determine every fact that your organization considers confidential.</p>
+              <p>Review the output before sharing it. Unsupported formats and outputs that fail verification are not labeled as rechecked copies.</p>
             </details>
             <details id="terms">
-              <summary data-i18n="termsTitle">利用条件</summary>
-              <p data-i18n="termsBodyOne">Freeは永久無料で商用利用できます。ProはUSD 29の買い切りで、1ユーザーが3台まで利用できます。</p>
-              <p data-i18n="termsBodyTwo">検出結果はファイル構造、選択したポリシー、対応する検出ルールに依存します。未対応形式や検証に失敗した出力を安全とは表示しません。</p>
+              <summary>Terms</summary>
+              <p>Free is planned for commercial use. Pro is planned as a one-time USD 29 license for one user on up to three devices. Final terms will be shown before purchase.</p>
+              <p>FilePreflight assists with preparation; it does not replace your organization's approval process, legal obligations, or security controls.</p>
             </details>
-            <details id="refunds">
-              <summary data-i18n="refundTitle">返金・サポート</summary>
-              <p data-i18n="refundBody">返金と決済上の問題は、決済事業者の手続きおよび適用法令に従って対応します。これは購入者の法定権利を制限しません。製品サポートは下記の連絡先から受け付けます。</p>
-            </details>
+            <details id="refunds"><summary>Refunds and support</summary><p>Refunds and payment issues will be handled under the payment provider's process and applicable law. This does not limit a purchaser's statutory rights. Product support is available through the contact link below.</p></details>
           </div>
         </div>
       </section>
 
       <section class="section final-cta">
         <div class="shell final-cta-inner">
-          <div>
-            <p class="eyebrow light" data-i18n="finalEyebrow">FilePreflight for Windows</p>
-            <h2 data-i18n="finalTitle">AIへ渡すファイルに、最後の確認を。</h2>
-            <p data-i18n="finalBody">初回Windowsリリースと決済の準備を進めています。</p>
-          </div>
-          <a
-            class="button button-light"
-            href="https://github.com/jp-north-man/FilePreflight/issues"
-            target="_blank"
-            rel="noopener noreferrer"
-            data-i18n="contactButton"
-            >お問い合わせ・サポート</a
-          >
+          <div><p class="eyebrow light">FilePreflight for Windows</p><h2>One more review before you share with AI.</h2><p>We are preparing the initial Windows release. In the meantime, use our guides to build a safer file-preparation workflow.</p></div>
+          <a class="button button-light" href="guides/">Explore the guides</a>
         </div>
       </section>
     </main>
 
     <footer class="site-footer">
       <div class="shell footer-inner">
-        <a class="brand footer-brand" href="#top"><span class="brand-mark" aria-hidden="true"><span></span></span><span>FilePreflight</span></a>
+        <a class="brand footer-brand" href="./"><span class="brand-mark" aria-hidden="true"><span></span></span><span>FilePreflight</span></a>
         <p>© 2026 FilePreflight</p>
         <div class="footer-links">
-          <a href="#privacy" data-i18n="footerPrivacy">プライバシー</a>
-          <a href="#terms" data-i18n="footerTerms">利用条件</a>
-          <a href="#refunds" data-i18n="footerRefunds">返金</a>
+          <a href="#privacy">Privacy</a><a href="#terms">Terms</a><a href="#refunds">Refunds</a><a href="guides/">Guides</a>
           <a href="https://github.com/jp-north-man/FilePreflight" target="_blank" rel="noopener noreferrer">GitHub</a>
+          <a href="https://www.ai-labs.co.jp/products/filepreflight">Developed by AI Labs LLC</a>
         </div>
       </div>
     </footer>

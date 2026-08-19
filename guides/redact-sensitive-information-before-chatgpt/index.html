@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="A format-aware workflow for minimising, redacting, sanitising, and verifying a document before it is uploaded to ChatGPT." />
+  <meta name="theme-color" content="#0b1020" />
+  <meta name="robots" content="index, follow" />
+  <meta property="og:type" content="article" />
+  <meta property="og:site_name" content="FilePreflight" />
+  <meta property="og:title" content="How to Redact Sensitive Information Before Uploading Documents to ChatGPT" />
+  <meta property="og:description" content="A format-aware workflow for minimising, redacting, sanitising, and verifying a document before it is uploaded to ChatGPT." />
+  <meta property="og:url" content="https://filepreflight.ai-labs.co.jp/guides/redact-sensitive-information-before-chatgpt/" />
+  <meta property="og:image" content="https://filepreflight.ai-labs.co.jp/og.png" />
+  <meta property="og:locale" content="en_US" />
+  <meta property="article:published_time" content="2026-08-19" />
+  <meta property="article:modified_time" content="2026-08-19" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="How to Redact Sensitive Information Before Uploading Documents to ChatGPT" />
+  <meta name="twitter:description" content="A format-aware workflow for minimising, redacting, sanitising, and verifying a document before it is uploaded to ChatGPT." />
+  <meta name="twitter:image" content="https://filepreflight.ai-labs.co.jp/og.png" />
+  <link rel="canonical" href="https://filepreflight.ai-labs.co.jp/guides/redact-sensitive-information-before-chatgpt/" />
+  <link rel="alternate" hreflang="en" href="https://filepreflight.ai-labs.co.jp/guides/redact-sensitive-information-before-chatgpt/" />
+  <link rel="alternate" hreflang="x-default" href="https://filepreflight.ai-labs.co.jp/guides/redact-sensitive-information-before-chatgpt/" />
+  <link rel="stylesheet" href="../../styles.css" />
+  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Article","headline":"How to Redact Sensitive Information Before Uploading Documents to ChatGPT","description":"A format-aware workflow for minimising, redacting, sanitising, and verifying a document before it is uploaded to ChatGPT.","datePublished":"2026-08-19","dateModified":"2026-08-19","inLanguage":"en","mainEntityOfPage":"https://filepreflight.ai-labs.co.jp/guides/redact-sensitive-information-before-chatgpt/","author":{"@type":"Organization","name":"AI Labs LLC","url":"https://www.ai-labs.co.jp/"},"publisher":{"@type":"Organization","name":"AI Labs LLC","url":"https://www.ai-labs.co.jp/"},"citation":["https://helpx.adobe.com/acrobat/desktop/protect-documents/redact-pdfs/redact.html","https://helpx.adobe.com/acrobat/desktop/protect-documents/redact-pdfs/sanitize.html","https://support.microsoft.com/en-us/office/collab-files/remove-hidden-data-and-personal-information-by-inspecting-documents-presentations-or-workbooks","https://ico.org.uk/for-organisations/uk-gdpr-guidance-and-resources/data-protection-principles/a-guide-to-the-data-protection-principles/data-minimisation/","https://help.openai.com/en/articles/8983778-chat-and-file-retention-policies-in-chatgpt"]},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"FilePreflight","item":"https://filepreflight.ai-labs.co.jp/"},{"@type":"ListItem","position":2,"name":"Guides","item":"https://filepreflight.ai-labs.co.jp/guides/"},{"@type":"ListItem","position":3,"name":"How to Redact Sensitive Information Before Uploading Documents to ChatGPT","item":"https://filepreflight.ai-labs.co.jp/guides/redact-sensitive-information-before-chatgpt/"}]}]}</script>
+  <title>How to Redact Sensitive Information Before Uploading Documents to ChatGPT | FilePreflight Guides</title>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="shell header-inner">
+    <a class="brand" href="../../" aria-label="FilePreflight home">
+      <span class="brand-mark" aria-hidden="true"><span></span></span><span>FilePreflight</span>
+    </a>
+    <nav class="desktop-nav" aria-label="Primary navigation">
+      <a href="../../">Product</a>
+      <a href="../../guides/">Guides</a>
+      <a href="../../#privacy">Privacy</a>
+      <a href="https://github.com/jp-north-man/FilePreflight" target="_blank" rel="noopener noreferrer">GitHub</a>
+    </nav>
+    <div class="language-switch" aria-label="Language">
+      <a href="../../ja/" lang="ja">日本語</a>
+      <a href="./" aria-current="page">EN</a>
+    </div>
+  </div>
+</header>
+  <main id="main">
+    <section class="guide-hero">
+      <div class="hero-glow hero-glow-one" aria-hidden="true"></div>
+      <div class="guide-hero-inner">
+        <nav class="breadcrumb" aria-label="Breadcrumb"><a href="../../">FilePreflight</a><span aria-hidden="true">/</span><a href="../">Guides</a><span aria-hidden="true">/</span><span>Redact before ChatGPT</span></nav>
+        <p class="eyebrow light">Practical workflow</p>
+        <h1>How to Redact Sensitive Information Before Uploading Documents to ChatGPT</h1>
+        <p class="hero-lede">A format-aware workflow for minimising, redacting, sanitising, and verifying a document before it is uploaded to ChatGPT.</p>
+        <div class="guide-meta"><span>Published August 19, 2026</span><span>7 min read</span><span>Reviewed against official sources</span></div>
+      </div>
+    </section>
+    <div class="guide-article-wrap">
+      <article class="guide-article">
+        <aside class="guide-summary"><strong>In brief</strong><p>Create a copy, reduce it to the minimum useful content, apply real redaction rather than visual covering, remove supported hidden data, and verify the exact output before checking the ChatGPT destination.</p></aside>
+<aside class="guide-warning"><strong>Important boundary</strong><p>A black rectangle, white text, cropping, or a screenshot placed over text may hide content visually without removing the underlying data.</p></aside>
+<section><h2>1. Reduce the document before you redact it</h2><p>Begin with the task you want ChatGPT to perform. If the task is to rewrite one clause, extract that clause. If the task is to analyse a small table, create a new table containing only the necessary columns. Every page or field removed at this stage is one less item that redaction must catch.</p>
+<p>Work on a duplicate. Keep the original unchanged and clearly name the prepared copy. This protects evidence, avoids accidental data loss, and makes the exact uploaded artefact easier to review later.</p></section>
+<section><h2>2. Build a redaction inventory</h2><p>List information that is unnecessary for the AI task. Include direct identifiers such as names, email addresses, phone numbers, account numbers, and signatures. Then consider indirect identifiers: precise dates, locations, job titles, unusual transaction values, project names, or combinations that point to one subject.</p>
+<p>Add non-personal company risks such as pricing, forecasts, credentials, internal URLs, security findings, source-system IDs, contract language, and information supplied by another party. Company data can be confidential even when it is not personal data.</p>
+<p>Choose transformations deliberately. Delete irrelevant passages, replace recurring identities with consistent placeholders, generalise unnecessary detail, and use synthetic values where the exact number is not needed.</p></section>
+<section><h2>3. Apply format-aware redaction and sanitisation</h2><p>In a PDF, Adobe distinguishes applying redaction to visible content from sanitising hidden information. Marking text is not the final step: the redaction must be applied and the saved result checked. Sanitisation can address other items such as metadata, comments, attachments, hidden layers, or scripts.</p>
+<p>In Word, Excel, or PowerPoint, inspect comments, tracked changes, document properties, headers and footers, hidden rows or slides, speaker notes, external links, and embedded objects as applicable. Microsoft Document Inspector can help, but Microsoft documents items it may not detect or remove automatically.</p>
+<p>For scanned documents, text may exist only as pixels until OCR is applied. OCR can misread characters, so search results need a visual review of every page. Images may also carry camera and location metadata.</p></section>
+<section><h2>4. Verify the exact upload copy</h2><ol><li>Close and reopen the prepared file.</li><li>Search for every identifier and keyword on the inventory.</li><li>Try selecting and copying text near each redaction.</li><li>Review comments, attachments, layers, notes, hidden sheets, and properties again.</li><li>Confirm that formulas, references, and document meaning still behave as intended.</li><li>Ask a second reviewer when the consequence of disclosure is high.</li></ol>
+<p>Finally, confirm the ChatGPT workspace, Data Controls, retention, administrator access, and organisational approval. File preparation and destination governance are different controls; both are required.</p></section>
+<section><h2>A reusable final checklist</h2><ul><li>The original is preserved and the output is clearly named.</li><li>Only content needed for the AI task remains.</li><li>Visible redactions remove underlying content rather than cover it.</li><li>Supported hidden data and metadata have been inspected.</li><li>The output opens normally and has been searched again.</li><li>The destination, account, settings, and policy are approved.</li><li>A human has reviewed the exact file to be uploaded.</li></ul></section>
+        <section class="guide-sources">
+          <h2>Official sources</h2>
+          <p class="guide-disclosure">This guide uses primary sources available on August 19, 2026. Product policies and software features can change, so confirm current terms before handling sensitive material.</p>
+          <ul><li><a href="https://helpx.adobe.com/acrobat/desktop/protect-documents/redact-pdfs/redact.html" target="_blank" rel="noopener noreferrer">Redact sensitive content in PDFs</a> — Adobe Help Center</li>
+<li><a href="https://helpx.adobe.com/acrobat/desktop/protect-documents/redact-pdfs/sanitize.html" target="_blank" rel="noopener noreferrer">Sanitize PDFs</a> — Adobe Help Center</li>
+<li><a href="https://support.microsoft.com/en-us/office/collab-files/remove-hidden-data-and-personal-information-by-inspecting-documents-presentations-or-workbooks" target="_blank" rel="noopener noreferrer">Remove hidden data and personal information with Document Inspector</a> — Microsoft Support</li>
+<li><a href="https://ico.org.uk/for-organisations/uk-gdpr-guidance-and-resources/data-protection-principles/a-guide-to-the-data-protection-principles/data-minimisation/" target="_blank" rel="noopener noreferrer">Data minimisation</a> — UK Information Commissioner&#039;s Office</li>
+<li><a href="https://help.openai.com/en/articles/8983778-chat-and-file-retention-policies-in-chatgpt" target="_blank" rel="noopener noreferrer">Chat and file retention policies in ChatGPT</a> — OpenAI Help Center</li></ul>
+        </section>
+        <aside class="guide-note"><strong>About FilePreflight</strong><p>FilePreflight is a Windows file-preparation product being developed by AI Labs LLC. The initial release is not yet available. Planned capabilities and limits may change, and automated detection remains best-effort.</p></aside>
+<nav class="guide-pagination" aria-label="Guide navigation">
+<a href="../is-it-safe-to-upload-confidential-documents-to-chatgpt/">← Confidential documents and ChatGPT</a>
+<a href="../anonymize-company-data-before-ai/">Anonymize company data →</a>
+</nav>
+      </article>
+    </div>
+  </main>
+<footer class="site-footer">
+  <div class="shell footer-inner">
+    <a class="brand footer-brand" href="../../"><span class="brand-mark" aria-hidden="true"><span></span></span><span>FilePreflight</span></a>
+    <p>© 2026 FilePreflight</p>
+    <div class="footer-links">
+      <a href="../../#privacy">Privacy</a>
+      <a href="../../guides/">Guides</a>
+      <a href="https://github.com/jp-north-man/FilePreflight" target="_blank" rel="noopener noreferrer">GitHub</a>
+      <a href="https://www.ai-labs.co.jp/products/filepreflight">Developed by AI Labs LLC</a>
+    </div>
+  </div>
+</footer>
+</body>
+</html>
