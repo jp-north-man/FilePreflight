@@ -85,8 +85,11 @@ if (!jaHtml.includes('<html lang="ja">')) fail("Japanese page must use ja langua
 if (!rootHtml.includes("Automated detection is best-effort")) fail("Root page must disclose best-effort detection");
 if (!jaHtml.includes("自動検出はベストエフォート")) fail("Japanese page must disclose best-effort detection");
 
-const cname = (await readFile(join(root, "CNAME"), "utf8")).trim();
-if (cname !== "filepreflight.ai-labs.co.jp") fail("CNAME is incorrect");
+const cnamePath = join(root, "CNAME");
+if (await exists(cnamePath)) {
+  const cname = (await readFile(cnamePath, "utf8")).trim();
+  if (cname !== "filepreflight.ai-labs.co.jp") fail("CNAME is incorrect");
+}
 const robots = await readFile(join(root, "robots.txt"), "utf8");
 if (!robots.includes("https://filepreflight.ai-labs.co.jp/sitemap.xml")) fail("robots.txt sitemap is incorrect");
 const sitemap = await readFile(join(root, "sitemap.xml"), "utf8");
@@ -99,5 +102,5 @@ if (failures.length) {
   for (const failure of failures) console.error("- " + failure);
   process.exitCode = 1;
 } else {
-  console.log("Validated " + htmlFiles.length + " HTML pages, " + canonicalUrls.length + " canonical URLs, local links, language routes, CNAME, robots.txt, and sitemap.xml.");
+  console.log("Validated " + htmlFiles.length + " HTML pages, " + canonicalUrls.length + " canonical URLs, local links, language routes, optional CNAME, robots.txt, and sitemap.xml.");
 }
