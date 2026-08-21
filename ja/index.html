@@ -3,13 +3,13 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="FilePreflightは、AIへアップロードする前に、対応する重要情報を検査・除去し、出力を再検査するWindows向けローカルファイル準備アプリです。" />
+    <meta name="description" content="FilePreflightは、AIへアップロードする前に、対応ファイルの確認用コピーを準備する開発中のWindowsアプリです。" />
     <meta name="theme-color" content="#0b1020" />
     <meta name="robots" content="index, follow" />
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="FilePreflight" />
     <meta property="og:title" content="FilePreflight — AIへ渡す前のローカルファイル準備" />
-    <meta property="og:description" content="対応する重要情報をローカルで検査・除去し、出力を再検査してからAIへ共有するためのコピーを作成します。" />
+    <meta property="og:description" content="対応するリスクを端末内で検査し、AIへ共有する前に確認用コピーを準備する予定のワークフローを紹介します。" />
     <meta property="og:url" content="https://filepreflight.ai-labs.co.jp/ja/" />
     <meta property="og:image" content="https://filepreflight.ai-labs.co.jp/og.png" />
     <meta property="og:locale" content="ja_JP" />
@@ -28,7 +28,7 @@
         "@type": "SoftwareApplication",
         "name": "FilePreflight",
         "url": "https://filepreflight.ai-labs.co.jp/ja/",
-        "description": "対応するファイルを端末内で検査し、選択した検出項目を除去して、AIへのアップロード前に出力を再検査するWindowsアプリです。",
+        "description": "AIへのアップロード前に、対応ファイルの確認用コピーを準備する開発中のWindowsアプリです。",
         "applicationCategory": "SecurityApplication",
         "operatingSystem": "Windows",
         "inLanguage": "ja",
@@ -50,7 +50,7 @@
           <span class="brand-mark" aria-hidden="true"><span></span></span><span>FilePreflight</span>
         </a>
         <nav class="desktop-nav" aria-label="メインナビゲーション">
-          <a href="#how">仕組み</a><a href="#formats">対応形式</a><a href="#pricing">料金</a><a href="../guides/">ガイド（英語）</a><a href="#privacy">プライバシー</a>
+          <a href="../ai-document-sanitizer/">AIサニタイザー（英語）</a><a href="#how">仕組み</a><a href="#formats">対応形式</a><a href="#pricing">料金</a><a href="../guides/">ガイド（英語）</a><a href="#privacy">プライバシー</a>
         </nav>
         <div class="language-switch" aria-label="言語">
           <a href="./" aria-current="page">日本語</a><a href="../" lang="en">EN</a>
@@ -63,17 +63,17 @@
         <div class="hero-glow hero-glow-one" aria-hidden="true"></div><div class="hero-glow hero-glow-two" aria-hidden="true"></div>
         <div class="shell hero-grid">
           <div class="hero-copy">
-            <p class="eyebrow">Windows向け・ファイル処理は端末内</p>
+            <p class="eyebrow">Windows向け・ローカル優先設計・開発中</p>
             <h1><span>AIに渡す前に、</span><span class="accent-text">より安全なコピーを準備。</span></h1>
-            <p class="hero-lede">FilePreflightは、対応する重要情報を検査し、選択した検出項目を除去したあと、出力を再び開いて再検査します。自動検出はベストエフォートのため、共有前の最終確認は利用者が行います。</p>
-            <div class="hero-actions"><a class="button button-primary" href="#how">仕組みを見る</a><a class="button button-secondary" href="../guides/">英語ガイドを読む</a></div>
+            <p class="hero-lede">FilePreflightは、対応する重要情報を検査し、選択した検出項目を除去したあと、別の出力コピーを開き直して再検査する設計です。自動検出はベストエフォートのため、共有前の最終確認は利用者が行います。</p>
+            <div class="hero-actions"><a class="button button-primary" href="../ai-document-sanitizer/">AIサニタイザーを見る</a><a class="button button-secondary" href="#how">仕組みを見る</a></div>
             <ul class="trust-list" aria-label="製品の設計方針">
-              <li><span aria-hidden="true">✓</span><span>端末内でファイル処理</span></li><li><span aria-hidden="true">✓</span><span>原本を上書きしない</span></li><li><span aria-hidden="true">✓</span><span>アカウント不要</span></li>
+              <li><span aria-hidden="true">✓</span><span>ローカル優先設計</span></li><li><span aria-hidden="true">✓</span><span>別コピーを作る設計</span></li><li><span aria-hidden="true">✓</span><span>利用者による最終確認</span></li>
             </ul>
           </div>
 
           <div class="product-window" aria-label="FilePreflightの処理プレビュー">
-            <div class="window-bar"><span class="window-dot"></span><span class="window-dot"></span><span class="window-dot"></span><span class="window-title">FilePreflight</span></div>
+            <div class="window-bar"><span class="window-dot"></span><span class="window-dot"></span><span class="window-dot"></span><span class="window-title">FilePreflight・製品プレビュー</span></div>
             <div class="context-menu">
               <div class="file-row"><span class="file-icon" aria-hidden="true"></span><div><strong>顧客レビュー.pdf</strong><span>右クリック → FilePreflight</span></div></div>
               <div class="safe-copy-command"><span class="mini-mark" aria-hidden="true"></span><span>確認用コピーを作成</span><span aria-hidden="true">›</span></div>
@@ -90,7 +90,7 @@
 
       <section class="section" id="how">
         <div class="shell">
-          <div class="section-heading"><p class="eyebrow">シンプルな操作、丁寧な処理</p><h2>右クリックから、再検査済みのコピーまで。</h2><p>原本には触れず、出力を開き直して再検査してから保存します。</p></div>
+          <div class="section-heading"><p class="eyebrow">シンプルな操作、丁寧な処理</p><h2>右クリックから、再検査済みのコピーまで。</h2><p>原本を保持し、出力コピーを開き直して再検査してから保存するワークフローを予定しています。</p></div>
           <div class="steps-grid">
             <article class="step-card"><span class="step-number">01</span><div class="step-icon inspect-icon" aria-hidden="true"></div><h3>検査する</h3><p>内容から実際の形式を確認し、選択したポリシーで対応する個人情報、認証情報、文書メタデータなどを探します。</p></article>
             <article class="step-card featured"><span class="step-number">02</span><div class="step-icon remove-icon" aria-hidden="true"></div><h3>除去・変換する</h3><p>検出した対象を形式に応じた方法で処理します。原本ファイルは変更しません。</p></article>
@@ -101,8 +101,8 @@
 
       <section class="section privacy-band" aria-labelledby="local-title">
         <div class="shell privacy-grid">
-          <div><p class="eyebrow light">Privacy by architecture</p><h2 id="local-title">ファイルは、あなたのPC内で処理。</h2></div>
-          <div class="privacy-points"><p>ファイル内容、抽出内容、OCRテキスト、検出した秘密情報、ファイル由来のデータを処理のためにクラウドへ送りません。</p><div class="data-flow" aria-label="ローカル処理の流れ"><span>元ファイル</span><span aria-hidden="true">→</span><span class="flow-device">この端末内で処理</span><span aria-hidden="true">→</span><span>再検査済みコピー</span></div></div>
+          <div><p class="eyebrow light">Privacy by architecture</p><h2 id="local-title">PC内でのファイル処理を目指す設計。</h2></div>
+          <div class="privacy-points"><p>アプリのファイル処理は端末内で完結する設計です。初回リリース時に、条件と方法を明記したネットワーク挙動テストを公開します。</p><div class="data-flow" aria-label="予定するローカル処理の流れ"><span>元ファイル</span><span aria-hidden="true">→</span><span class="flow-device">この端末内で処理</span><span aria-hidden="true">→</span><span>再検査済みコピー</span></div></div>
         </div>
       </section>
 
@@ -133,7 +133,7 @@
         <div class="shell legal-grid">
           <div class="section-heading aligned-left"><p class="eyebrow">透明性</p><h2>共有する前に、知っておいてほしいこと。</h2></div>
           <div class="legal-cards">
-            <details open><summary>プライバシー</summary><p>アプリのファイル処理は端末内で行う設計です。ファイル内容、抽出内容、OCRテキスト、検出内容を処理のために外部へ送信しません。</p><p>Proの購入・有効化では、決済・ライセンスに必要な情報だけを処理する予定です。このサイトは解析・広告Cookieを使用しません。</p></details>
+            <details open><summary>プライバシー</summary><p>アプリのファイル処理は端末内で行う設計です。初回リリース時に、条件と方法を明記したネットワーク挙動テストを公開します。</p><p>Proの購入・有効化では、決済・ライセンスに必要な情報だけを処理する予定です。このサイトは解析・広告Cookieを使用しません。</p></details>
             <details id="limitations"><summary>検出の限界</summary><p>自動検出はベストエフォートです。結果はファイル構造、選択したポリシー、対応形式、対応する検出ルールに依存します。組織が機密と考えるすべての事実を自動で判断するものではありません。</p><p>共有前に出力を確認してください。未対応形式や検証に失敗した出力は、再検査済みコピーとして表示しません。</p></details>
             <details id="terms"><summary>利用条件</summary><p>Freeは商用利用可、ProはUSD 29の買い切りで1ユーザー3台までを予定しています。最終条件は購入前に表示します。</p><p>FilePreflightはファイル準備を支援するもので、組織の承認手続き、法的義務、セキュリティ対策を代替しません。</p></details>
             <details id="refunds"><summary>返金・サポート</summary><p>返金と決済上の問題は、決済事業者の手続きと適用法令に従って対応する予定です。購入者の法定権利を制限しません。製品サポートはGitHubから受け付けます。</p></details>
@@ -142,14 +142,14 @@
       </section>
 
       <section class="section final-cta">
-        <div class="shell final-cta-inner"><div><p class="eyebrow light">FilePreflight for Windows</p><h2>AIへ渡す前に、もう一度確認。</h2><p>初回Windowsリリースを準備中です。英語ガイドでは、ファイルを共有する前の確認方法を解説しています。</p></div><a class="button button-light" href="../guides/">英語ガイドを見る</a></div>
+        <div class="shell final-cta-inner"><div><p class="eyebrow light">FilePreflight for Windows</p><h2>AIへ渡す前に、もう一度確認。</h2><p>AIドキュメントサニタイザーの予定するワークフロー、検証方針、対応形式、制限を英語で紹介しています。</p></div><a class="button button-light" href="../ai-document-sanitizer/">AIサニタイザーを見る</a></div>
       </section>
     </main>
 
     <footer class="site-footer">
       <div class="shell footer-inner">
         <a class="brand footer-brand" href="../"><span class="brand-mark" aria-hidden="true"><span></span></span><span>FilePreflight</span></a><p>© 2026 FilePreflight</p>
-        <div class="footer-links"><a href="#privacy">プライバシー</a><a href="#terms">利用条件</a><a href="#refunds">返金</a><a href="../guides/">ガイド（英語）</a><a href="https://github.com/jp-north-man/FilePreflight" target="_blank" rel="noopener noreferrer">GitHub</a><a href="https://www.ai-labs.co.jp/products/filepreflight">AI Labs合同会社が開発・運営</a></div>
+        <div class="footer-links"><a href="#privacy">プライバシー</a><a href="#terms">利用条件</a><a href="#refunds">返金</a><a href="../ai-document-sanitizer/">AIサニタイザー（英語）</a><a href="../guides/">ガイド（英語）</a><a href="https://github.com/jp-north-man/FilePreflight" target="_blank" rel="noopener noreferrer">GitHub</a><a href="https://www.ai-labs.co.jp/products/filepreflight">AI Labs合同会社が開発・運営</a></div>
       </div>
     </footer>
   </body>

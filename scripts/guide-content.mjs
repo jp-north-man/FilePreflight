@@ -1,52 +1,5 @@
 export const guides = [
   {
-    slug: "ai-document-sanitizer",
-    shortTitle: "AI document sanitizer",
-    title: "AI Document Sanitizer: What It Can—and Cannot—Remove Before Upload",
-    description: "A practical definition of document sanitization for AI, including visible text, hidden data, metadata, credentials, and the limits of automated detection.",
-    category: "Core guide",
-    readTime: "7 min read",
-    summary: "An AI document sanitizer should reduce unnecessary disclosure across visible content and hidden file data, preserve the original, and recheck the output. It cannot decide every fact your organization considers confidential, so the last review remains human.",
-    warning: "Sanitization reduces exposure; it does not guarantee anonymity, regulatory compliance, or that a file is safe for every destination.",
-    sections: [
-      {
-        heading: "What an AI document sanitizer is",
-        html: [
-          "<p>An AI document sanitizer is a preparation tool used before a file is uploaded to an AI service. Its job is broader than drawing black boxes over names. A useful sanitizer inspects supported file structures, helps remove selected findings, writes a separate copy, and checks that copy again.</p>",
-          "<p>The goal is data minimisation: send only the material needed for the task. If an AI needs five columns from a workbook, the safest starting point is usually a new workbook containing those five columns—not the complete operational file with most cells hidden.</p>",
-          "<p>The word <em>sanitizer</em> describes a workflow, not a guarantee. NIST cautions that masking identifiers alone may not achieve meaningful de-identification. Details such as dates, locations, amounts, roles, and rare events can identify a person or company when combined.</p>"
-        ]
-      },
-      {
-        heading: "Four layers worth inspecting",
-        html: [
-          "<div class=\"guide-table-wrap\"><table class=\"guide-table\"><thead><tr><th>Layer</th><th>Examples</th><th>Typical action</th></tr></thead><tbody><tr><td>Visible content</td><td>Names, email addresses, account numbers, contract terms</td><td>Remove, replace, generalise, or extract only what is needed</td></tr><tr><td>Hidden document data</td><td>Comments, tracked changes, hidden sheets, speaker notes, attachments</td><td>Inspect the file structure and remove supported items</td></tr><tr><td>Metadata</td><td>Author, last saved by, title, company, timestamps, image location</td><td>Clear supported properties and re-inspect</td></tr><tr><td>Credentials and technical secrets</td><td>API keys, tokens, passwords, connection strings</td><td>Replace with inert placeholders; rotate anything already exposed</td></tr></tbody></table></div>",
-          "<p>Different formats expose different layers. Microsoft Document Inspector checks several kinds of hidden Office data, while Adobe treats visible PDF redaction and hidden-content sanitization as related but distinct operations. A cross-format tool should publish what it can detect, what it can remove, and what still needs manual review.</p>"
-        ]
-      },
-      {
-        heading: "A defensible preflight workflow",
-        html: [
-          "<ol><li><strong>Define the AI task.</strong> Write down the smallest information set needed for a useful answer.</li><li><strong>Duplicate the source.</strong> Keep the original under your normal access controls and work on a copy.</li><li><strong>Inspect supported risks.</strong> Check both visible content and format-specific hidden data.</li><li><strong>Transform deliberately.</strong> Delete unnecessary content, replace identifiers consistently, and preserve only the relationships needed for analysis.</li><li><strong>Reopen and recheck.</strong> Search again, inspect metadata, confirm the file opens, and check that the transformation did not change the meaning you need.</li><li><strong>Approve the destination.</strong> Confirm the AI product, workspace, settings, retention, and organisational policy before upload.</li></ol>",
-          "<p>Rechecking matters because removal can fail, a conversion can preserve an unexpected object, or a spreadsheet formula can reveal information through its output. The final check should be performed on the exact copy that will be uploaded.</p>"
-        ]
-      },
-      {
-        heading: "What automation cannot decide for you",
-        html: [
-          "<p>Pattern matching can recognise supported email addresses, identifiers, credential formats, and metadata fields. It cannot reliably understand every commercial sensitivity. A project nickname, a unique discount, or the combination of job title and region may be harmless in one company and identifying in another.</p>",
-          "<p>No findings should therefore mean only that the scanner found nothing within its tested scope. It should not be presented as proof that the file contains no confidential information. Human review, destination controls, and the organisation's approval process remain separate layers.</p>"
-        ]
-      }
-    ],
-    sources: [
-      { title: "Remove hidden data and personal information with Document Inspector", publisher: "Microsoft Support", url: "https://support.microsoft.com/en-us/office/collab-files/remove-hidden-data-and-personal-information-by-inspecting-documents-presentations-or-workbooks" },
-      { title: "Sanitize PDFs", publisher: "Adobe Help Center", url: "https://helpx.adobe.com/acrobat/desktop/protect-documents/redact-pdfs/sanitize.html" },
-      { title: "SP 800-188: De-Identifying Government Datasets", publisher: "NIST", url: "https://csrc.nist.gov/pubs/sp/800/188/final" },
-      { title: "Data minimisation", publisher: "UK Information Commissioner's Office", url: "https://ico.org.uk/for-organisations/uk-gdpr-guidance-and-resources/data-protection-principles/a-guide-to-the-data-protection-principles/data-minimisation/" }
-    ]
-  },
-  {
     slug: "is-it-safe-to-upload-confidential-documents-to-chatgpt",
     shortTitle: "Confidential documents and ChatGPT",
     title: "Is It Safe to Upload Confidential Company Documents to ChatGPT?",

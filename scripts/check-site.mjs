@@ -33,10 +33,12 @@ async function exists(path) {
 const files = await walk(root);
 const htmlFiles = files.filter((file) => file.endsWith(".html"));
 const canonicalUrls = [];
+const redirectRelative = join("guides", "ai-document-sanitizer", "index.html");
 
 for (const file of htmlFiles) {
   const source = await readFile(file, "utf8");
   const label = relative(root, file);
+  const isRedirect = label === redirectRelative;
   if (!/<html lang="(?:en|ja)">/.test(source)) fail(label + ": missing supported html lang");
   if (!/<title>[^<]+<\/title>/.test(source)) fail(label + ": missing title");
   if (!/<meta name="description" content="[^"]+"/.test(source)) fail(label + ": missing description");
@@ -44,7 +46,7 @@ for (const file of htmlFiles) {
   const canonical = source.match(/<link rel="canonical" href="([^"]+)"/)?.[1];
   if (!canonical) fail(label + ": missing canonical");
   else {
-    canonicalUrls.push(canonical);
+    if (!isRedirect) canonicalUrls.push(canonical);
     if (!canonical.startsWith("https://filepreflight.ai-labs.co.jp/")) fail(label + ": canonical uses the wrong host");
   }
   const structuredData = [...source.matchAll(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/g)];
@@ -76,17 +78,29 @@ for (const file of htmlFiles) {
 }
 
 if (new Set(canonicalUrls).size !== canonicalUrls.length) fail("Canonical URLs are not unique");
-if (htmlFiles.filter((file) => file.includes(join("guides", ""))).length !== 13) fail("Expected one guide index and 12 guide articles");
+const guideHtmlFiles = htmlFiles.filter((file) => file.includes(join("guides", "")));
+if (guideHtmlFiles.length !== 13) fail("Expected one guide index, 11 guide articles, and one legacy redirect");
 
 const rootHtml = await readFile(join(root, "index.html"), "utf8");
 const jaHtml = await readFile(join(root, "ja", "index.html"), "utf8");
+const c01Html = await readFile(join(root, "ai-document-sanitizer", "index.html"), "utf8");
+const redirectHtml = await readFile(join(root, redirectRelative), "utf8");
 if (!rootHtml.includes('<html lang="en">')) fail("Root page must be English");
 if (!jaHtml.includes('<html lang="ja">')) fail("Japanese page must use ja language");
 if (!rootHtml.includes("Automated detection is best-effort")) fail("Root page must disclose best-effort detection");
 if (!jaHtml.includes("自動検出はベストエフォート")) fail("Japanese page must disclose best-effort detection");
+if (!c01Html.includes("<h1>AI Document Sanitizer: Make Files Safe Before You Upload</h1>")) fail("C01 must use the requested H1");
+if (!c01Html.includes('href="https://filepreflight.ai-labs.co.jp/ai-document-sanitizer/"')) fail("C01 canonical is incorrect");
+if (!c01Html.includes("Automated detection is best-effort")) fail("C01 must disclose best-effort detection");
+if (!c01Html.includes("No download or checkout is available yet")) fail("C01 must disclose release availability");
+if (!redirectHtml.includes('<meta name="robots" content="noindex, follow"')) fail("Legacy C01 route must be noindex, follow");
+if (!redirectHtml.includes('content="0; url=../../ai-document-sanitizer/"')) fail("Legacy C01 route must redirect to the new route");
+if (!redirectHtml.includes('href="https://filepreflight.ai-labs.co.jp/ai-document-sanitizer/"')) fail("Legacy C01 route must canonicalize to the new route");
 
 const cnamePath = join(root, "CNAME");
-if (await exists(cnamePath)) {
+if (!await exists(cnamePath)) {
+  fail("CNAME is required for the FilePreflight custom domain");
+} else {
   const cname = (await readFile(cnamePath, "utf8")).trim();
   if (cname !== "filepreflight.ai-labs.co.jp") fail("CNAME is incorrect");
 }
@@ -96,11 +110,13 @@ const sitemap = await readFile(join(root, "sitemap.xml"), "utf8");
 for (const canonical of canonicalUrls) {
   if (!sitemap.includes(canonical)) fail("Sitemap does not contain " + canonical);
 }
+if (!sitemap.includes("https://filepreflight.ai-labs.co.jp/ai-document-sanitizer/")) fail("Sitemap does not contain the C01 route");
+if (sitemap.includes("https://filepreflight.ai-labs.co.jp/guides/ai-document-sanitizer/")) fail("Sitemap must not contain the legacy C01 route");
 
 if (failures.length) {
   console.error("Site validation failed:");
   for (const failure of failures) console.error("- " + failure);
   process.exitCode = 1;
 } else {
-  console.log("Validated " + htmlFiles.length + " HTML pages, " + canonicalUrls.length + " canonical URLs, local links, language routes, optional CNAME, robots.txt, and sitemap.xml.");
+  console.log("Validated " + htmlFiles.length + " HTML pages, " + canonicalUrls.length + " indexable canonical URLs, local links, C01 routing, language routes, required CNAME, robots.txt, and sitemap.xml.");
 }

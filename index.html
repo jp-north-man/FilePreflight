@@ -3,13 +3,13 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="FilePreflight prepares a cleaner copy of supported files before AI upload by inspecting, removing selected findings, and rechecking locally on Windows." />
+    <meta name="description" content="FilePreflight is a Windows app in development for preparing a separate, reviewable copy of supported files before an AI upload." />
     <meta name="theme-color" content="#0b1020" />
     <meta name="robots" content="index, follow" />
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="FilePreflight" />
     <meta property="og:title" content="FilePreflight — Local file preparation before AI upload" />
-    <meta property="og:description" content="Inspect supported sensitive information, remove selected findings, and recheck a copy locally before sharing it with AI." />
+    <meta property="og:description" content="Explore the planned local-first workflow for inspecting supported risks and preparing a separate copy before sharing a file with AI." />
     <meta property="og:url" content="https://filepreflight.ai-labs.co.jp/" />
     <meta property="og:image" content="https://filepreflight.ai-labs.co.jp/og.png" />
     <meta property="og:locale" content="en_US" />
@@ -28,7 +28,7 @@
         "@type": "SoftwareApplication",
         "name": "FilePreflight",
         "url": "https://filepreflight.ai-labs.co.jp/",
-        "description": "A Windows application that locally inspects supported files, removes selected findings, and rechecks the output before AI upload.",
+        "description": "A Windows application in development for preparing a separate, reviewable copy of supported files before AI upload.",
         "applicationCategory": "SecurityApplication",
         "operatingSystem": "Windows",
         "inLanguage": "en",
@@ -51,6 +51,7 @@
           <span>FilePreflight</span>
         </a>
         <nav class="desktop-nav" aria-label="Primary navigation">
+          <a href="ai-document-sanitizer/">AI Sanitizer</a>
           <a href="#how">How it works</a>
           <a href="#formats">Formats</a>
           <a href="#pricing">Pricing</a>
@@ -70,29 +71,29 @@
         <div class="hero-glow hero-glow-two" aria-hidden="true"></div>
         <div class="shell hero-grid">
           <div class="hero-copy">
-            <p class="eyebrow">For Windows · File processing stays local</p>
+            <p class="eyebrow">For Windows · Local-first design · In development</p>
             <h1>
               <span>Before you upload to AI,</span>
               <span class="accent-text">prepare a cleaner copy.</span>
             </h1>
             <p class="hero-lede">
-              FilePreflight inspects supported sensitive information, removes selected findings, then reopens and scans the output again on your Windows PC. Detection is best-effort, so you stay in control of the final review.
+              FilePreflight is being designed to inspect supported sensitive information, help remove selected findings, then reopen and scan a separate output copy on your Windows PC. Detection is best-effort, so you stay in control of the final review.
             </p>
             <div class="hero-actions">
-              <a class="button button-primary" href="#how">See how it works</a>
-              <a class="button button-secondary" href="guides/">Read the guides</a>
+              <a class="button button-primary" href="ai-document-sanitizer/">Explore the AI sanitizer</a>
+              <a class="button button-secondary" href="#how">See how it works</a>
             </div>
             <ul class="trust-list" aria-label="Product principles">
-              <li><span aria-hidden="true">✓</span><span>Local file processing</span></li>
-              <li><span aria-hidden="true">✓</span><span>Never overwrites the original</span></li>
-              <li><span aria-hidden="true">✓</span><span>No account required</span></li>
+              <li><span aria-hidden="true">✓</span><span>Local-first architecture</span></li>
+              <li><span aria-hidden="true">✓</span><span>Separate-copy workflow</span></li>
+              <li><span aria-hidden="true">✓</span><span>Human final review</span></li>
             </ul>
           </div>
 
           <div class="product-window" aria-label="FilePreflight workflow preview">
             <div class="window-bar">
               <span class="window-dot"></span><span class="window-dot"></span><span class="window-dot"></span>
-              <span class="window-title">FilePreflight</span>
+              <span class="window-title">FilePreflight · Product preview</span>
             </div>
             <div class="context-menu">
               <div class="file-row">
@@ -126,7 +127,7 @@
           <div class="section-heading">
             <p class="eyebrow">Simple action, careful processing</p>
             <h2>From right click to a rechecked copy.</h2>
-            <p>The original remains untouched. The output is reopened and scanned again before FilePreflight saves it.</p>
+            <p>The planned workflow preserves the original, then reopens and scans the output copy again before saving it.</p>
           </div>
           <div class="steps-grid">
             <article class="step-card">
@@ -150,9 +151,9 @@
 
       <section class="section privacy-band" aria-labelledby="local-title">
         <div class="shell privacy-grid">
-          <div><p class="eyebrow light">Privacy by architecture</p><h2 id="local-title">Your files stay on your PC.</h2></div>
+          <div><p class="eyebrow light">Privacy by architecture</p><h2 id="local-title">Designed to keep file processing on your PC.</h2></div>
           <div class="privacy-points">
-            <p>File content, extracted content, OCR text, detected secrets, and derived file data are not sent to the cloud for processing.</p>
+            <p>The planned application workflow processes file content, extracted content, OCR text, detected secrets, and derived file data on the device. A documented network-behavior test will be published with the initial release.</p>
             <div class="data-flow" aria-label="Local processing flow">
               <span>Original file</span><span aria-hidden="true">→</span><span class="flow-device">Processed on this device</span><span aria-hidden="true">→</span><span>Rechecked copy</span>
             </div>
@@ -206,7 +207,7 @@
           <div class="legal-cards">
             <details open>
               <summary>Privacy</summary>
-              <p>App file processing is designed to happen on the device. File content, extracted content, OCR text, and detected findings are not transmitted externally for processing.</p>
+              <p>App file processing is designed to happen on the device. A documented network-behavior test will be published with the initial release so this can be evaluated under stated conditions.</p>
               <p>Pro purchase and activation will process only information required for payment and licensing. This site uses no analytics or advertising cookies.</p>
             </details>
             <details id="limitations">
@@ -226,8 +227,8 @@
 
       <section class="section final-cta">
         <div class="shell final-cta-inner">
-          <div><p class="eyebrow light">FilePreflight for Windows</p><h2>One more review before you share with AI.</h2><p>We are preparing the initial Windows release. In the meantime, use our guides to build a safer file-preparation workflow.</p></div>
-          <a class="button button-light" href="guides/">Explore the guides</a>
+          <div><p class="eyebrow light">FilePreflight for Windows</p><h2>One more review before you share with AI.</h2><p>Explore the AI document sanitizer workflow, evidence standard, planned formats, and known limits.</p></div>
+          <a class="button button-light" href="ai-document-sanitizer/">Explore the AI sanitizer</a>
         </div>
       </section>
     </main>
@@ -237,7 +238,7 @@
         <a class="brand footer-brand" href="./"><span class="brand-mark" aria-hidden="true"><span></span></span><span>FilePreflight</span></a>
         <p>© 2026 FilePreflight</p>
         <div class="footer-links">
-          <a href="#privacy">Privacy</a><a href="#terms">Terms</a><a href="#refunds">Refunds</a><a href="guides/">Guides</a>
+          <a href="#privacy">Privacy</a><a href="#terms">Terms</a><a href="#refunds">Refunds</a><a href="ai-document-sanitizer/">AI Sanitizer</a><a href="guides/">Guides</a>
           <a href="https://github.com/jp-north-man/FilePreflight" target="_blank" rel="noopener noreferrer">GitHub</a>
           <a href="https://www.ai-labs.co.jp/products/filepreflight">Developed by AI Labs LLC</a>
         </div>

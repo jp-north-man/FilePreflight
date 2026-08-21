@@ -6,6 +6,7 @@ import { guides } from "./guide-content.mjs";
 const root = join(dirname(fileURLToPath(import.meta.url)), "..");
 const siteUrl = "https://filepreflight.ai-labs.co.jp";
 const published = "2026-08-19";
+const modified = "2026-08-21";
 
 function escapeHtml(value) {
   return String(value)
@@ -25,6 +26,7 @@ function header(prefix, guideTitle) {
     "    </a>",
     '    <nav class="desktop-nav" aria-label="Primary navigation">',
     '      <a href="' + prefix + '">Product</a>',
+    '      <a href="' + prefix + 'ai-document-sanitizer/">AI Sanitizer</a>',
     '      <a href="' + prefix + 'guides/">Guides</a>',
     '      <a href="' + prefix + '#privacy">Privacy</a>',
     '      <a href="https://github.com/jp-north-man/FilePreflight" target="_blank" rel="noopener noreferrer">GitHub</a>',
@@ -46,6 +48,7 @@ function footer(prefix) {
     "    <p>© 2026 FilePreflight</p>",
     '    <div class="footer-links">',
     '      <a href="' + prefix + '#privacy">Privacy</a>',
+    '      <a href="' + prefix + 'ai-document-sanitizer/">AI Sanitizer</a>',
     '      <a href="' + prefix + 'guides/">Guides</a>',
     '      <a href="https://github.com/jp-north-man/FilePreflight" target="_blank" rel="noopener noreferrer">GitHub</a>',
     '      <a href="https://www.ai-labs.co.jp/products/filepreflight">Developed by AI Labs LLC</a>',
@@ -64,7 +67,7 @@ function articleSchema(guide, canonical) {
         headline: guide.title,
         description: guide.description,
         datePublished: published,
-        dateModified: published,
+        dateModified: modified,
         inLanguage: "en",
         mainEntityOfPage: canonical,
         author: {
@@ -125,7 +128,7 @@ function renderArticle(guide, index) {
     '  <meta property="og:image" content="' + siteUrl + '/og.png" />',
     '  <meta property="og:locale" content="en_US" />',
     '  <meta property="article:published_time" content="' + published + '" />',
-    '  <meta property="article:modified_time" content="' + published + '" />',
+    '  <meta property="article:modified_time" content="' + modified + '" />',
     '  <meta name="twitter:card" content="summary_large_image" />',
     '  <meta name="twitter:title" content="' + escapeHtml(guide.title) + '" />',
     '  <meta name="twitter:description" content="' + escapeHtml(guide.description) + '" />',
@@ -161,7 +164,7 @@ function renderArticle(guide, index) {
     '          <p class="guide-disclosure">This guide uses primary sources available on August 19, 2026. Product policies and software features can change, so confirm current terms before handling sensitive material.</p>',
     "          <ul>" + sources + "</ul>",
     "        </section>",
-    '        <aside class="guide-note"><strong>About FilePreflight</strong><p>FilePreflight is a Windows file-preparation product being developed by AI Labs LLC. The initial release is not yet available. Planned capabilities and limits may change, and automated detection remains best-effort.</p></aside>',
+    '        <aside class="guide-note"><strong>About FilePreflight</strong><p>FilePreflight is a Windows file-preparation product being developed by AI Labs LLC. The initial release is not yet available. Planned capabilities and limits may change, and automated detection remains best-effort. <a href="../../ai-document-sanitizer/">Explore the AI document sanitizer workflow</a>.</p></aside>',
     pagination,
     "      </article>",
     "    </div>",
@@ -243,12 +246,13 @@ function renderIndex() {
     '        <p class="eyebrow light">File privacy before AI</p>',
     "        <h1>Prepare the file, then use AI.</h1>",
     '        <p class="hero-lede">Practical, source-backed guides for reducing unnecessary disclosure in documents, spreadsheets, PDFs, and code files before an AI upload.</p>',
-    '        <div class="guide-meta"><span>12 guides</span><span>Updated August 19, 2026</span><span>Official sources</span></div>',
+    '        <div class="guide-meta"><span>11 guides + product page</span><span>Updated August 21, 2026</span><span>Official sources</span></div>',
     "      </div>",
     "    </section>",
     '    <section class="section">',
     '      <div class="shell">',
     '        <div class="guide-index-intro"><p class="eyebrow">Start with the risk, not the tool</p><h2>A review workflow you can explain.</h2><p>Each guide separates visible content, hidden data, service settings, and human review. No guide promises that automated detection makes a file completely safe or anonymous.</p></div>',
+    '        <a class="guide-featured-product" href="../ai-document-sanitizer/"><span><span class="eyebrow light">Featured product page</span><strong>AI Document Sanitizer: Make Files Safe Before You Upload</strong><small>See the planned workflow, evidence standard, format coverage, and known limits.</small></span><span>Explore FilePreflight →</span></a>',
     '        <div class="guide-grid">' + cards + "</div>",
     "      </div>",
     "    </section>",
@@ -274,6 +278,7 @@ for (const [index, guide] of guides.entries()) {
 const sitemapUrls = [
   { path: "/", priority: "1.0" },
   { path: "/ja/", priority: "0.8" },
+  { path: "/ai-document-sanitizer/", priority: "0.95" },
   { path: "/guides/", priority: "0.9" },
   ...guides.map((guide) => ({ path: "/guides/" + guide.slug + "/", priority: "0.8" }))
 ];
@@ -283,7 +288,7 @@ const sitemap = [
   ...sitemapUrls.map((item) => [
     "  <url>",
     "    <loc>" + siteUrl + item.path + "</loc>",
-    "    <lastmod>" + published + "</lastmod>",
+    "    <lastmod>" + modified + "</lastmod>",
     "    <changefreq>monthly</changefreq>",
     "    <priority>" + item.priority + "</priority>",
     "  </url>"
