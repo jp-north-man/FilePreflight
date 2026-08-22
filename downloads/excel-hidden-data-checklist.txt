@@ -1,0 +1,18 @@
+FILEPREFLIGHT — EXCEL HIDDEN-DATA CHECKLIST
+
+[ ] Preserve the source workbook and create a separate working copy.
+[ ] Confirm that .xlsx is the intended supported format; macro-enabled workbooks are outside the launch scope.
+[ ] Delete sheets, rows, columns, tables, and precision the AI task does not need.
+[ ] Inspect hidden and very-hidden worksheets.
+[ ] Inspect hidden rows and columns, filtered-out rows, grouped data, and custom views.
+[ ] Review formulas for internal paths, linked workbooks, server names, pricing logic, and sensitive references.
+[ ] Review defined names, external links, data connections, queries, pivot caches, charts, and embedded objects.
+[ ] Inspect comments, notes, threaded discussions, document properties, authors, and custom properties.
+[ ] Review filenames, sheet names, headers, footers, print areas, and hidden objects.
+[ ] Replace identifiers consistently and assess combinations that can re-identify a person or company.
+[ ] Close and reopen the exact prepared workbook.
+[ ] Confirm formulas, totals, references, formatting, and required charts still behave as intended.
+[ ] Search again for every source name, domain, identifier, project term, and distinctive phrase.
+[ ] Have a responsible person review the exact workbook and AI destination.
+
+Hidden is not private. Work on a copy, and do not assume a zero-result search proves that every risk is gone.

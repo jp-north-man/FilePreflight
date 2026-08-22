@@ -3,105 +3,19 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="How to evaluate a local redaction workflow, understand where offline processing ends, and minimise the copy later uploaded to an AI service." />
-  <meta name="theme-color" content="#0b1020" />
-  <meta name="robots" content="index, follow" />
-  <meta property="og:type" content="article" />
-  <meta property="og:site_name" content="FilePreflight" />
-  <meta property="og:title" content="Offline Document Redaction Before ChatGPT, Claude, or Gemini" />
-  <meta property="og:description" content="How to evaluate a local redaction workflow, understand where offline processing ends, and minimise the copy later uploaded to an AI service." />
-  <meta property="og:url" content="https://filepreflight.ai-labs.co.jp/guides/offline-document-redaction-tool/" />
-  <meta property="og:image" content="https://filepreflight.ai-labs.co.jp/og.png" />
-  <meta property="og:locale" content="en_US" />
-  <meta property="article:published_time" content="2026-08-19" />
-  <meta property="article:modified_time" content="2026-08-21" />
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Offline Document Redaction Before ChatGPT, Claude, or Gemini" />
-  <meta name="twitter:description" content="How to evaluate a local redaction workflow, understand where offline processing ends, and minimise the copy later uploaded to an AI service." />
-  <meta name="twitter:image" content="https://filepreflight.ai-labs.co.jp/og.png" />
-  <link rel="canonical" href="https://filepreflight.ai-labs.co.jp/guides/offline-document-redaction-tool/" />
-  <link rel="alternate" hreflang="en" href="https://filepreflight.ai-labs.co.jp/guides/offline-document-redaction-tool/" />
-  <link rel="alternate" hreflang="x-default" href="https://filepreflight.ai-labs.co.jp/guides/offline-document-redaction-tool/" />
+  <meta name="description" content="This FilePreflight page has moved to its permanent URL." />
+  <meta name="robots" content="noindex, follow" />
+  <meta http-equiv="refresh" content="0; url=/offline-document-redaction-tool/" />
+  <link rel="canonical" href="https://filepreflight.ai-labs.co.jp/offline-document-redaction-tool/" />
   <link rel="stylesheet" href="../../styles.css" />
-  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Article","headline":"Offline Document Redaction Before ChatGPT, Claude, or Gemini","description":"How to evaluate a local redaction workflow, understand where offline processing ends, and minimise the copy later uploaded to an AI service.","datePublished":"2026-08-19","dateModified":"2026-08-21","inLanguage":"en","mainEntityOfPage":"https://filepreflight.ai-labs.co.jp/guides/offline-document-redaction-tool/","author":{"@type":"Organization","name":"AI Labs LLC","url":"https://www.ai-labs.co.jp/"},"publisher":{"@type":"Organization","name":"AI Labs LLC","url":"https://www.ai-labs.co.jp/"},"citation":["https://developers.openai.com/api/docs/guides/your-data#default-usage-policies-by-endpoint","https://privacy.claude.com/en/articles/7996866-how-long-do-you-store-my-organization-s-data","https://privacy.claude.com/en/articles/7996868-is-my-data-used-for-model-training","https://support.google.com/gemini/answer/13594961?hl=en","https://www.cyber.gov.au/business-government/secure-design/artificial-intelligence/artificial-intelligence-for-small-business"]},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"FilePreflight","item":"https://filepreflight.ai-labs.co.jp/"},{"@type":"ListItem","position":2,"name":"Guides","item":"https://filepreflight.ai-labs.co.jp/guides/"},{"@type":"ListItem","position":3,"name":"Offline Document Redaction Before ChatGPT, Claude, or Gemini","item":"https://filepreflight.ai-labs.co.jp/guides/offline-document-redaction-tool/"}]}]}</script>
-  <title>Offline Document Redaction Before ChatGPT, Claude, or Gemini | FilePreflight Guides</title>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"How to Evaluate an Offline Document Redaction Workflow","url":"https://filepreflight.ai-labs.co.jp/offline-document-redaction-tool/","isPartOf":{"@type":"WebSite","name":"FilePreflight","url":"https://filepreflight.ai-labs.co.jp/"}}</script>
+  <title>How to Evaluate an Offline Document Redaction Workflow | FilePreflight</title>
 </head>
-<body>
-  <a class="skip-link" href="#main">Skip to content</a>
-<header class="site-header">
-  <div class="shell header-inner">
-    <a class="brand" href="../../" aria-label="FilePreflight home">
-      <span class="brand-mark" aria-hidden="true"><span></span></span><span>FilePreflight</span>
-    </a>
-    <nav class="desktop-nav" aria-label="Primary navigation">
-      <a href="../../">Product</a>
-      <a href="../../ai-document-sanitizer/">AI Sanitizer</a>
-      <a href="../../guides/">Guides</a>
-      <a href="../../#privacy">Privacy</a>
-      <a href="https://github.com/jp-north-man/FilePreflight" target="_blank" rel="noopener noreferrer">GitHub</a>
-    </nav>
-    <div class="language-switch" aria-label="Language">
-      <a href="../../ja/" lang="ja">日本語</a>
-      <a href="./" aria-current="page">EN</a>
-    </div>
-  </div>
-</header>
-  <main id="main">
-    <section class="guide-hero">
-      <div class="hero-glow hero-glow-one" aria-hidden="true"></div>
-      <div class="guide-hero-inner">
-        <nav class="breadcrumb" aria-label="Breadcrumb"><a href="../../">FilePreflight</a><span aria-hidden="true">/</span><a href="../">Guides</a><span aria-hidden="true">/</span><span>Offline document redaction</span></nav>
-        <p class="eyebrow light">Local workflow</p>
-        <h1>Offline Document Redaction Before ChatGPT, Claude, or Gemini</h1>
-        <p class="hero-lede">How to evaluate a local redaction workflow, understand where offline processing ends, and minimise the copy later uploaded to an AI service.</p>
-        <div class="guide-meta"><span>Published August 19, 2026</span><span>8 min read</span><span>Reviewed against official sources</span></div>
-      </div>
-    </section>
-    <div class="guide-article-wrap">
-      <article class="guide-article">
-        <aside class="guide-summary"><strong>In brief</strong><p>Offline redaction keeps the source-file preparation stage on your device. Once the prepared copy is uploaded to ChatGPT, Claude, or Gemini, that copy leaves the device and is governed by the selected service, plan, settings, and contract.</p></aside>
-<aside class="guide-warning"><strong>Important boundary</strong><p>Desktop does not automatically mean offline. A credible local tool should document or demonstrate whether file content, extracted text, OCR, findings, and derived data generate any network traffic.</p></aside>
-<section><h2>Draw the boundary clearly</h2><p>An offline redaction workflow can reduce the amount of information disclosed during preparation because the source file does not need to be sent to another scanning service. It can inspect and transform a local copy before any AI upload occurs.</p>
-<p>The word <em>offline</em> ends at the upload button. When you send the prepared copy to ChatGPT, Claude, or Gemini, the selected data leaves the device. The AI provider's current terms, workspace controls, retention, and any connected third party then apply.</p>
-<p>This distinction matters in product claims. A tool may accurately say that its preflight processing is local while it would be inaccurate to suggest that the subsequent cloud AI interaction remains local.</p></section>
-<section><h2>How to evaluate a local redaction tool</h2><div class="guide-table-wrap"><table class="guide-table"><thead><tr><th>Question</th><th>Evidence to look for</th></tr></thead><tbody><tr><td>What stays local?</td><td>A specific statement covering file bytes, extracted text, OCR, detected secrets, and derived data</td></tr><tr><td>Does it require an account?</td><td>Whether sign-in or cloud activation is needed for file processing</td></tr><tr><td>Can the claim be tested?</td><td>A zero-network test, firewall test, reproducible documentation, or independent review</td></tr><tr><td>What formats are supported?</td><td>A matrix of detected, removable, unsupported, and manual-review items by format</td></tr><tr><td>What happens to the original?</td><td>Copy-first processing, clear output path, and failure behaviour</td></tr><tr><td>Is output verified?</td><td>Reopen, readability check, second scan, and a report of remaining findings</td></tr></tbody></table></div>
-<p>Do not infer offline behaviour from an installer, a desktop window, or the absence of a browser. Licensing, telemetry, OCR, threat scanning, or AI-assisted detection can all create network traffic. The documentation should separate content processing from optional update or licensing traffic.</p></section>
-<section><h2>A six-step local-to-cloud workflow</h2><ol><li><strong>Duplicate.</strong> Preserve the original and prepare a working copy under the same access controls.</li><li><strong>Minimise.</strong> Remove pages, rows, fields, attachments, and precision not needed for the AI task.</li><li><strong>Inspect locally.</strong> Scan supported visible content, hidden structures, metadata, and credentials.</li><li><strong>Transform.</strong> Apply true redaction, consistent placeholders, or generalisation appropriate to the format.</li><li><strong>Reopen and review.</strong> Verify the exact clean copy and document unresolved findings.</li><li><strong>Approve the destination.</strong> Check the AI service, plan, settings, retention, administrator access, and organisation policy.</li></ol>
-<p>Where possible, test the prompt with synthetic data first. A synthetic example can reveal whether the task design works before any real company information is considered.</p></section>
-<section><h2>ChatGPT, Claude, and Gemini are not one policy</h2><p>Each provider offers multiple consumer, business, enterprise, and API products. Do not write a policy for the brand as a whole. OpenAI's API documentation, for example, states that API data is not used for training by default but also describes abuse-monitoring retention and endpoint-specific application state. That does not establish the policy for a personal ChatGPT workspace.</p>
-<p>Anthropic documents separate rules for consumer Claude and commercial products, including training and retention. Google likewise distinguishes Gemini Apps from Gemini features in Workspace. Confirm the current documentation for the exact account and feature on the day of use.</p>
-<p>Questions to record include: Is content used for model improvement? How is it retained? Can an administrator access it? Does a connector send it to another service? Is deletion supported? Is the use covered by the organisation's contract and policy?</p></section>
-<section><h2>When local preprocessing is not enough</h2><p>Some documents should not be uploaded even after redaction. Examples can include material whose context remains identifying, information covered by strict contractual restrictions, active credentials, highly sensitive legal or security records, or data whose transformation would destroy the task's meaning.</p>
-<p>Alternatives include using a synthetic dataset, asking a general question without the document, running an approved model in a controlled environment, or conducting the work manually. Preflight is a decision point, not an instruction to upload.</p></section>
-        <section class="guide-sources">
-          <h2>Official sources</h2>
-          <p class="guide-disclosure">This guide uses primary sources available on August 19, 2026. Product policies and software features can change, so confirm current terms before handling sensitive material.</p>
-          <ul><li><a href="https://developers.openai.com/api/docs/guides/your-data#default-usage-policies-by-endpoint" target="_blank" rel="noopener noreferrer">Your data: default usage policies by API endpoint</a> — OpenAI Developers</li>
-<li><a href="https://privacy.claude.com/en/articles/7996866-how-long-do-you-store-my-organization-s-data" target="_blank" rel="noopener noreferrer">How long do you store my organization&#039;s data?</a> — Anthropic Privacy Center</li>
-<li><a href="https://privacy.claude.com/en/articles/7996868-is-my-data-used-for-model-training" target="_blank" rel="noopener noreferrer">Is my organization&#039;s data used for model training?</a> — Anthropic Privacy Center</li>
-<li><a href="https://support.google.com/gemini/answer/13594961?hl=en" target="_blank" rel="noopener noreferrer">Gemini Apps Privacy Hub</a> — Google Help</li>
-<li><a href="https://www.cyber.gov.au/business-government/secure-design/artificial-intelligence/artificial-intelligence-for-small-business" target="_blank" rel="noopener noreferrer">Artificial intelligence for small business</a> — Australian Cyber Security Centre</li></ul>
-        </section>
-        <aside class="guide-note"><strong>About FilePreflight</strong><p>FilePreflight is a Windows file-preparation product being developed by AI Labs LLC. The initial release is not yet available. Planned capabilities and limits may change, and automated detection remains best-effort. <a href="../../ai-document-sanitizer/">Explore the AI document sanitizer workflow</a>.</p></aside>
-<nav class="guide-pagination" aria-label="Guide navigation">
-<a href="../remove-hidden-data-metadata-before-ai/">← Remove hidden data and metadata</a>
-<a href="../redact-sanitize-pdf-before-chatgpt/">Redact and sanitize a PDF →</a>
-</nav>
-      </article>
-    </div>
+<body class="redirect-page">
+  <main>
+    <a class="brand" href="../../"><span class="brand-mark" aria-hidden="true"><span></span></span><span>FilePreflight</span></a>
+    <h1>This page has moved.</h1>
+    <p>Continue to <a href="/offline-document-redaction-tool/">How to Evaluate an Offline Document Redaction Workflow</a>.</p>
   </main>
-<footer class="site-footer">
-  <div class="shell footer-inner">
-    <a class="brand footer-brand" href="../../"><span class="brand-mark" aria-hidden="true"><span></span></span><span>FilePreflight</span></a>
-    <p>© 2026 FilePreflight</p>
-    <div class="footer-links">
-      <a href="../../#privacy">Privacy</a>
-      <a href="../../ai-document-sanitizer/">AI Sanitizer</a>
-      <a href="../../guides/">Guides</a>
-      <a href="https://github.com/jp-north-man/FilePreflight" target="_blank" rel="noopener noreferrer">GitHub</a>
-      <a href="https://www.ai-labs.co.jp/products/filepreflight">Developed by AI Labs LLC</a>
-    </div>
-  </div>
-</footer>
 </body>
 </html>

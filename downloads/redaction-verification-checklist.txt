@@ -1,0 +1,14 @@
+FILEPREFLIGHT — REDACTION VERIFICATION CHECKLIST
+
+[ ] Work on a copy; preserve the original.
+[ ] Use a redaction/removal function, not a shape, highlight, crop, or white text.
+[ ] Apply the redaction and save to a new file.
+[ ] Close and reopen the exact output.
+[ ] Search each sensitive term and common variant.
+[ ] Try selecting and copying around every redacted region.
+[ ] Inspect properties, comments, annotations, attachments, layers, forms, scripts, and embedded objects as applicable.
+[ ] Review scanned or image-only pages visually; account for OCR errors.
+[ ] Confirm the file opens normally and useful content still works.
+[ ] Have a responsible person review the exact upload copy.
+
+A zero-result search is not proof that an image-only or unsupported item is absent.

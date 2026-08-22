@@ -1,0 +1,15 @@
+FILEPREFLIGHT — LEGAL DOCUMENT AI REVIEW CHECKLIST
+
+General information only; not legal advice.
+
+[ ] Identify the jurisdiction, professional rules, engagement terms, protective orders, client instructions, and organisational policy.
+[ ] Confirm the exact AI service, workspace, feature, contract, retention, administrator access, and connectors.
+[ ] Obtain the responsible lawyer's or organisation's approval and any consent required for the actual matter.
+[ ] Use only the minimum clause, chronology, extract, or synthetic hypothetical needed for the task.
+[ ] Review direct identifiers and matter-specific indirect identifiers together.
+[ ] Inspect comments, tracked changes, rejected wording, properties, authors, filenames, attachments, exhibits, and embedded objects.
+[ ] Apply true redaction and format-specific sanitisation to a separate copy.
+[ ] Close and reopen the exact output; search, extract, and visually review it again.
+[ ] Confirm the document remains usable and that redaction has not changed required meaning or evidentiary value.
+[ ] Record the purpose, approver, destination, settings, and exact uploaded copy where policy requires it—without logging confidential values.
+[ ] Stop or use a synthetic or controlled alternative when residual risk remains too high.

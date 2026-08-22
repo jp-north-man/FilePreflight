@@ -1,8 +1,11 @@
 export const guides = [
   {
+    id: "G01",
     slug: "is-it-safe-to-upload-confidential-documents-to-chatgpt",
     shortTitle: "Confidential documents and ChatGPT",
     title: "Is It Safe to Upload Confidential Company Documents to ChatGPT?",
+    seoTitle: "Confidential Files and ChatGPT: Is It Safe?",
+    seoDescription: "Decide whether a confidential file belongs in ChatGPT by checking the workspace, retention, policy, data minimisation, and the exact upload copy.",
     description: "A decision framework for ChatGPT uploads covering workspace type, training controls, retention, administrator access, data minimisation, and document preparation.",
     category: "ChatGPT privacy",
     readTime: "8 min read",
@@ -49,9 +52,12 @@ export const guides = [
     ]
   },
   {
+    id: "G02",
     slug: "redact-sensitive-information-before-chatgpt",
     shortTitle: "Redact before ChatGPT",
     title: "How to Redact Sensitive Information Before Uploading Documents to ChatGPT",
+    seoTitle: "Redact Sensitive Information Before ChatGPT",
+    seoDescription: "A practical workflow to minimise, redact, sanitise, and verify a document before uploading the prepared copy to ChatGPT.",
     description: "A format-aware workflow for minimising, redacting, sanitising, and verifying a document before it is uploaded to ChatGPT.",
     category: "Practical workflow",
     readTime: "7 min read",
@@ -104,9 +110,12 @@ export const guides = [
     ]
   },
   {
+    id: "G03",
     slug: "anonymize-company-data-before-ai",
     shortTitle: "Anonymize company data",
     title: "How to Anonymize Company Data Before Using ChatGPT or Claude",
+    seoTitle: "Anonymize Company Data Before AI",
+    seoDescription: "Reduce identification and commercial disclosure risk while preserving the structure needed for useful ChatGPT or Claude analysis.",
     description: "A practical method for reducing identification and commercial disclosure risk while preserving enough structure for useful AI analysis.",
     category: "Company data",
     readTime: "8 min read",
@@ -161,9 +170,14 @@ export const guides = [
     ]
   },
   {
+    id: "F03",
+    route: "/sanitize-excel-before-ai-analysis/",
+    pageKind: "format",
     slug: "anonymize-excel-data-before-ai",
     shortTitle: "Anonymize Excel data",
     title: "How to Anonymize Excel Data Before AI Analysis",
+    seoTitle: "Sanitize Excel Before AI Analysis",
+    seoDescription: "Prepare an Excel workbook for AI analysis by checking hidden sheets, formulas, comments, links, properties, and the exact output copy.",
     description: "A workbook-specific checklist for visible cells, hidden sheets, formulas, comments, external links, document properties, and a final clean-copy review.",
     category: "Excel & XLSX",
     readTime: "8 min read",
@@ -216,9 +230,13 @@ export const guides = [
     ]
   },
   {
+    id: "G05",
+    route: "/guides/remove-hidden-data-and-metadata-before-ai/",
     slug: "remove-hidden-data-metadata-before-ai",
     shortTitle: "Remove hidden data and metadata",
     title: "Remove Hidden Data and Metadata Before Sharing Documents with AI",
+    seoTitle: "Remove Hidden Data and Metadata Before AI",
+    seoDescription: "Find and remove document properties, comments, revisions, attachments, hidden layers, image metadata, and other hidden data before AI sharing.",
     description: "A format-by-format guide to document properties, comments, revisions, attachments, hidden layers, image metadata, and post-removal verification.",
     category: "Hidden data",
     readTime: "7 min read",
@@ -270,11 +288,16 @@ export const guides = [
     ]
   },
   {
+    id: "C02",
+    route: "/offline-document-redaction-tool/",
+    pageKind: "product",
     slug: "offline-document-redaction-tool",
     shortTitle: "Offline document redaction",
-    title: "Offline Document Redaction Before ChatGPT, Claude, or Gemini",
+    title: "How to Evaluate an Offline Document Redaction Workflow",
+    seoTitle: "Evaluate Offline Document Redaction Tools",
+    seoDescription: "Evaluate a local redaction workflow, identify where offline processing ends, and minimise the copy later uploaded to an AI service.",
     description: "How to evaluate a local redaction workflow, understand where offline processing ends, and minimise the copy later uploaded to an AI service.",
-    category: "Local workflow",
+    category: "Evaluation guide",
     readTime: "8 min read",
     summary: "Offline redaction keeps the source-file preparation stage on your device. Once the prepared copy is uploaded to ChatGPT, Claude, or Gemini, that copy leaves the device and is governed by the selected service, plan, settings, and contract.",
     warning: "Desktop does not automatically mean offline. A credible local tool should document or demonstrate whether file content, extracted text, OCR, findings, and derived data generate any network traffic.",
@@ -326,9 +349,14 @@ export const guides = [
     ]
   },
   {
+    id: "F01",
+    route: "/sanitize-pdf-before-chatgpt/",
+    pageKind: "format",
     slug: "redact-sanitize-pdf-before-chatgpt",
     shortTitle: "Redact and sanitize a PDF",
     title: "Redact and Sanitize a PDF Before Uploading It to ChatGPT",
+    seoTitle: "Sanitize a PDF Before ChatGPT",
+    seoDescription: "Prepare a PDF for ChatGPT with permanent redaction, hidden-content sanitisation, OCR review, metadata checks, and final verification.",
     description: "A careful PDF workflow covering permanent visible redaction, hidden-content sanitisation, scanned pages, OCR review, metadata, attachments, and final verification.",
     category: "PDF",
     readTime: "8 min read",
@@ -390,9 +418,14 @@ export const guides = [
     ]
   },
   {
+    id: "C03",
+    route: "/document-privacy-scanner/",
+    pageKind: "product",
     slug: "document-privacy-scanner",
     shortTitle: "Document privacy scanner",
-    title: "Document Privacy Scanner for AI Uploads: What a Useful Scan Should Show",
+    title: "How to Evaluate a Document Privacy Scanner",
+    seoTitle: "Evaluate a Document Privacy Scanner",
+    seoDescription: "Assess privacy-scanner coverage, evidence, false negatives, remediation, rechecking, format support, and the meaning of no findings.",
     description: "How to assess scanner coverage, evidence, false negatives, format support, remediation, rechecking, and the meaning of a no-findings result.",
     category: "Evaluation",
     readTime: "7 min read",
@@ -445,9 +478,13 @@ export const guides = [
     ]
   },
   {
+    id: "G07",
+    route: "/guides/best-offline-document-redaction-tools-for-ai/",
     slug: "best-offline-document-redaction-tools",
     shortTitle: "Offline redaction tools",
     title: "Best Offline Document Redaction Tools for AI: An Honest Comparison",
+    seoTitle: "Offline Redaction Tools for AI: Comparison",
+    seoDescription: "Compare FilePreflight, Adobe Acrobat Pro, Microsoft Document Inspector, and ExifTool by use case, format coverage, workflow, and evidence.",
     description: "A use-case comparison of FilePreflight, Adobe Acrobat Pro, Microsoft Document Inspector, and ExifTool without treating desktop software as automatically offline.",
     category: "Comparison",
     readTime: "9 min read",
@@ -508,14 +545,19 @@ export const guides = [
     sources: [
       { title: "Redaction and sanitization overview", publisher: "Adobe Help Center", url: "https://helpx.adobe.com/acrobat/desktop/protect-documents/redact-pdfs/redacting-sanitizing.html" },
       { title: "Remove hidden data and personal information with Document Inspector", publisher: "Microsoft Support", url: "https://support.microsoft.com/en-US/Office/collab-files/remove-hidden-data-and-personal-information-by-inspecting-documents-presentations-or-workbooks" },
-      { title: "ExifTool application documentation", publisher: "ExifTool", url: "https://exiftool.org/exiftool_pod2.html" },
+      { title: "ExifTool application documentation", publisher: "ExifTool", url: "https://github.com/exiftool/exiftool" },
       { title: "SP 800-188: De-Identifying Government Datasets", publisher: "NIST", url: "https://www.nist.gov/publications/de-identifying-government-datasets-techniques-and-governance" }
     ]
   },
   {
+    id: "U01",
+    route: "/legal-document-redaction-for-ai/",
+    pageKind: "use-case",
     slug: "legal-document-redaction-before-ai",
     shortTitle: "Legal document redaction",
     title: "Legal Document Redaction Before Using AI",
+    seoTitle: "Legal Document Redaction for AI",
+    seoDescription: "A cautious legal-document workflow covering confidentiality, privilege, approval, metadata, case-specific identifiers, and human review.",
     description: "A cautious workflow for legal documents covering confidentiality, privilege, client and organisational approval, metadata, case-specific identifiers, and human review.",
     category: "Legal workflow",
     readTime: "9 min read",
@@ -577,9 +619,14 @@ export const guides = [
     ]
   },
   {
+    id: "U05",
+    route: "/remove-api-keys-secrets-before-ai/",
+    pageKind: "use-case",
     slug: "remove-api-keys-before-ai-coding-tools",
     shortTitle: "Remove API keys and secrets",
     title: "Remove API Keys, Credentials, and Secrets Before Using AI Coding Tools",
+    seoTitle: "Remove API Keys Before Using AI Tools",
+    seoDescription: "Respond to exposed credentials, prepare the minimum supported file set, replace live secrets, and review the exact copy before using AI tools.",
     description: "A response-first workflow for finding credentials in code, configuration, logs, notebooks, and history—and rotating anything already exposed.",
     category: "Code & secrets",
     readTime: "8 min read",

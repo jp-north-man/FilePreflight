@@ -49,7 +49,7 @@ const schema = JSON.stringify({
       name: title,
       description,
       inLanguage: "en",
-      dateModified: "2026-08-21",
+      dateModified: "2026-08-22",
       about: { "@id": canonical + "#software" },
       breadcrumb: { "@id": canonical + "#breadcrumb" },
       publisher: { "@type": "Organization", name: "AI Labs LLC", url: "https://www.ai-labs.co.jp/" }
@@ -123,11 +123,11 @@ const page = `<!doctype html>
       <a class="brand" href="../" aria-label="FilePreflight home"><span class="brand-mark" aria-hidden="true"><span></span></span><span>FilePreflight</span></a>
       <nav class="desktop-nav" aria-label="Primary navigation">
         <a href="#workflow">How it works</a>
-        <a href="#evidence">Evidence</a>
+        <a href="../evidence/">Evidence</a>
         <a href="#formats">Formats &amp; limits</a>
         <a href="../guides/">Guides</a>
       </nav>
-      <a class="c01-header-cta" href="mailto:contact@ai-labs.co.jp?subject=FilePreflight%20launch%20updates">Get launch updates</a>
+      <a class="c01-header-cta" data-cta="launch-email" data-page="ai-document-sanitizer" data-destination="email" href="mailto:contact@ai-labs.co.jp?subject=FilePreflight%20launch%20updates%20%E2%80%94%20AI%20document%20sanitizer">Get launch updates</a>
     </div>
   </header>
 
@@ -142,8 +142,8 @@ const page = `<!doctype html>
           <h1>AI Document Sanitizer: Make Files Safe Before You Upload</h1>
           <p class="c01-lede">FilePreflight is a Windows app in development for inspecting supported sensitive content, hidden metadata, and risky file elements on-device—then exporting a separate copy for you to review before an AI upload.</p>
           <div class="hero-actions">
-            <a class="button button-primary" href="mailto:contact@ai-labs.co.jp?subject=FilePreflight%20launch%20updates">Get launch updates</a>
-            <a class="button button-secondary" href="#workflow">See the workflow</a>
+            <a class="button button-primary" data-cta="launch-email" data-page="ai-document-sanitizer" data-destination="email" href="mailto:contact@ai-labs.co.jp?subject=FilePreflight%20launch%20updates%20%E2%80%94%20AI%20document%20sanitizer">Get launch updates</a>
+            <a class="button button-secondary" data-cta="workflow" data-page="ai-document-sanitizer" data-destination="workflow" href="#workflow">See the workflow</a>
           </div>
           <p class="c01-boundary"><strong>What “safe” means here:</strong> reducing identified exposure in supported file types—not a guarantee that a file is anonymous, compliant, or risk-free. Automated detection is best-effort, so review the exported copy before uploading.</p>
           <p class="c01-release-note">Initial Windows release in preparation. No download or checkout is available yet.</p>
@@ -209,13 +209,14 @@ const page = `<!doctype html>
           <p class="eyebrow">Evidence over slogans</p>
           <h2 id="evidence-title">Proof should be inspectable.</h2>
           <p>The release will be accompanied by artifacts that let you evaluate the local-first workflow and its limits. Until they are published, this page describes those capabilities as planned.</p>
-          <div class="c01-status"><span aria-hidden="true"></span><strong>Evidence package: publishing with the initial release</strong></div>
+          <div class="c01-status"><span aria-hidden="true"></span><strong>Methods published; release-build results pending</strong></div>
+          <p><a class="text-link" data-cta="evidence" data-page="ai-document-sanitizer" data-destination="evidence" href="../evidence/">Review the public evidence status →</a></p>
         </div>
         <div class="c01-evidence-grid">
-          <article><span class="c01-evidence-number">01</span><h3>Network behavior test</h3><p>A dated, reproducible test with the environment, method, and observed network behavior documented.</p></article>
-          <article><span class="c01-evidence-number">02</span><h3>Synthetic before &amp; after files</h3><p>Downloadable examples containing deliberate visible and hidden test data, paired with the exported copy.</p></article>
-          <article><span class="c01-evidence-number">03</span><h3>Format-and-limits matrix</h3><p>Per-format coverage for inspection, transformation, rechecking, and cases that still need manual work.</p></article>
-          <article><span class="c01-evidence-number">04</span><h3>Example review record</h3><p>A sample findings and recheck summary—presented as a review aid, never as security certification.</p></article>
+          <article><span class="c01-evidence-number">01</span><h3>Network behavior test</h3><p>A dated, reproducible test with the environment, method, and observed network behavior documented.</p><a href="../evidence/#network">Method and status →</a></article>
+          <article><span class="c01-evidence-number">02</span><h3>Synthetic redaction demo</h3><p>Educational PDFs compare visual covering with removed content. They are explicitly not FilePreflight output.</p><a href="../downloads/pdf-redaction-demo/">Open the demo →</a></article>
+          <article><span class="c01-evidence-number">03</span><h3>Format-and-limits matrix</h3><p>Per-format coverage for inspection, transformation, rechecking, and cases that still need manual work.</p><a href="../evidence/#coverage">Planned coverage →</a></article>
+          <article><span class="c01-evidence-number">04</span><h3>Example review record</h3><p>A findings and recheck summary—presented as a review aid, never as security certification.</p><a href="../evidence/#review-record">Record criteria →</a></article>
         </div>
       </div>
     </section>
@@ -290,7 +291,7 @@ const page = `<!doctype html>
           <article><div><p>Free</p><strong>$0</strong></div><span>Planned</span><ul><li>Single-file workflow</li><li>All verified launch formats</li><li>No ads or watermarks planned</li></ul></article>
           <article class="featured"><div><p>Pro</p><strong>$29 <small>once</small></strong></div><span>Planned</span><ul><li>Folder and batch workflows</li><li>Expanded capacity</li><li>Custom policies and output control</li></ul></article>
         </div>
-        <a class="button button-primary" href="mailto:contact@ai-labs.co.jp?subject=FilePreflight%20launch%20updates">Get launch updates</a>
+        <a class="button button-primary" data-cta="launch-email" data-page="ai-document-sanitizer" data-destination="email" href="mailto:contact@ai-labs.co.jp?subject=FilePreflight%20launch%20updates%20%E2%80%94%20AI%20document%20sanitizer">Get launch updates</a>
       </div>
     </section>
 
@@ -344,7 +345,7 @@ const page = `<!doctype html>
     <section class="section c01-final-cta">
       <div class="shell c01-final-inner">
         <div><p class="eyebrow light">FilePreflight for Windows</p><h2>Make the upload decision with a file you have actually reviewed.</h2><p>Join the launch list for availability, verified format coverage, and the first public evidence package.</p></div>
-        <a class="button button-light" href="mailto:contact@ai-labs.co.jp?subject=FilePreflight%20launch%20updates">Get launch updates</a>
+        <a class="button button-light" data-cta="launch-email" data-page="ai-document-sanitizer" data-destination="email" href="mailto:contact@ai-labs.co.jp?subject=FilePreflight%20launch%20updates%20%E2%80%94%20AI%20document%20sanitizer">Get launch updates</a>
       </div>
     </section>
   </main>
@@ -353,7 +354,7 @@ const page = `<!doctype html>
     <div class="shell footer-inner">
       <a class="brand footer-brand" href="../"><span class="brand-mark" aria-hidden="true"><span></span></span><span>FilePreflight</span></a>
       <p>© 2026 FilePreflight</p>
-      <div class="footer-links"><a href="../">Product</a><a href="../guides/">Guides</a><a href="../#privacy">Privacy</a><a href="mailto:contact@ai-labs.co.jp">Contact</a><a href="https://www.ai-labs.co.jp/products/filepreflight">Developed by AI Labs LLC</a></div>
+      <div class="footer-links"><a href="../">Product</a><a href="../evidence/">Evidence</a><a href="../guides/">Guides</a><a href="../#privacy">Privacy</a><a href="mailto:contact@ai-labs.co.jp">Contact</a><a href="https://www.ai-labs.co.jp/products/filepreflight">Developed by AI Labs LLC</a></div>
     </div>
   </footer>
 </body>

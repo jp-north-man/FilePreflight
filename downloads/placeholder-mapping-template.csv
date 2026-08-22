@@ -1,0 +1,7 @@
+placeholder_type,placeholder,original_value_local_only,transformation_notes
+company,Company A,,Keep the original value only in a separately protected local mapping
+person,Person 01,,Use the same placeholder for the same person throughout the prepared copy
+project,Project Red,,Replace related filenames comments and free text consistently
+location,Region 1,,Generalise further when a rare location could re-identify the subject
+date,Q2 2026,,Preserve only the precision the AI task actually needs
+amount,USD 750K-1M,,Use a range or synthetic value when the exact amount is unnecessary

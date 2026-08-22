@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Download two synthetic PDFs and compare visual covering with a comparison file that never contains the canary values." />
+  <meta name="theme-color" content="#0b1020" />
+  <meta name="robots" content="index, follow" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="FilePreflight" />
+  <meta property="og:title" content="PDF Redaction Demo: Overlay vs Absence | FilePreflight" />
+  <meta property="og:description" content="Download two synthetic PDFs and compare visual covering with a comparison file that never contains the canary values." />
+  <meta property="og:url" content="https://filepreflight.ai-labs.co.jp/downloads/pdf-redaction-demo/" />
+  <meta property="og:image" content="https://filepreflight.ai-labs.co.jp/og.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="canonical" href="https://filepreflight.ai-labs.co.jp/downloads/pdf-redaction-demo/" />
+  <link rel="alternate" hreflang="en" href="https://filepreflight.ai-labs.co.jp/downloads/pdf-redaction-demo/" />
+  <link rel="alternate" hreflang="x-default" href="https://filepreflight.ai-labs.co.jp/downloads/pdf-redaction-demo/" />
+  <link rel="stylesheet" href="../../styles.css" />
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"PDF redaction demo: visual covering vs verified absence","description":"Download two synthetic PDFs and compare visual covering with a comparison file that never contains the canary values.","url":"https://filepreflight.ai-labs.co.jp/downloads/pdf-redaction-demo/","dateModified":"2026-08-22","inLanguage":"en","publisher":{"@type":"Organization","name":"AI Labs LLC","url":"https://www.ai-labs.co.jp/"}}</script>
+  <title>PDF Redaction Demo: Overlay vs Absence | FilePreflight</title>
+</head>
+<body class="">
+  <a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header"><div class="shell header-inner"><a class="brand" href="../../" aria-label="FilePreflight home"><span class="brand-mark" aria-hidden="true"><span></span></span><span>FilePreflight</span></a><nav class="desktop-nav" aria-label="Primary navigation"><a href="../../">Product</a><a href="../../ai-document-sanitizer/">AI Sanitizer</a><a href="../../evidence/">Evidence</a><a href="../../guides/">Guides</a><a href="../../#privacy">Privacy</a></nav><div class="language-switch" aria-label="Language"><a href="../../ja/" lang="ja">日本語</a><a href="/downloads/pdf-redaction-demo/" aria-current="page">EN</a></div></div></header>
+  <main id="main">
+    <section class="resource-hero"><div class="hero-glow hero-glow-one" aria-hidden="true"></div><div class="shell resource-hero-inner"><nav class="breadcrumb" aria-label="Breadcrumb"><a href="../../">FilePreflight</a><span aria-hidden="true">/</span><span>PDF redaction demo: visual covering vs verified absence</span></nav><p class="eyebrow light">Synthetic before-and-after files</p><h1>PDF redaction demo: visual covering vs verified absence</h1><p class="hero-lede">A two-file exercise showing why a black rectangle is not proof that underlying PDF text is gone—and why absence must be verified separately.</p></div></section>
+<section class="section resource-section"><div class="shell resource-shell">
+  <aside class="guide-warning"><strong>Educational synthetic demo</strong><p>These files were created to demonstrate a verification technique. They are not FilePreflight output, do not contain real customer data, and are not evidence that the unreleased app has passed a PDF test.</p></aside>
+  <section><p class="eyebrow">The comparison</p><h2>Same visual idea, different underlying data.</h2><p>The first PDF places an opaque rectangle over two synthetic canaries. They are hidden from view but remain extractable. The second PDF was authored without those canaries in its content data.</p><div class="download-grid"><article class="download-card unsafe"><span class="status-tag unsafe">Unsafe technique</span><h3>Opaque overlay</h3><p>The page looks covered, but text extraction still recovers both synthetic canaries.</p><a class="button button-secondary" data-cta="download-pdf" data-page="pdf-redaction-demo" data-destination="unsafe-overlay-pdf" href="./unsafe-overlay-demo.pdf" download>Download overlay demo</a><code>SHA-256<br />4910ADA866424F3CC9C738247710527D349A5D135DE3B42B33FB15E02C432CE0</code></article><article class="download-card removed"><span class="status-tag verified">Canaries absent</span><h3>Comparison file</h3><p>The two canaries were never written to this PDF and are absent from its page content and decoded streams.</p><a class="button button-primary" data-cta="download-pdf" data-page="pdf-redaction-demo" data-destination="canaries-absent-pdf" href="./canaries-absent-demo.pdf" download>Download comparison file</a><code>SHA-256<br />E6B3EF38247808599B8FF713CE4E1F569D09EE33DB761B26F046E8E577937A0A</code></article></div></section>
+  <section><p class="eyebrow">Verify it yourself</p><h2>Do more than look at the page.</h2><ol class="method-list"><li><strong>Open both PDFs.</strong><span>They should render as one-page synthetic documents.</span></li><li><strong>Search the files.</strong><span>Search near the covered region or use a PDF text extraction tool.</span></li><li><strong>Try selection and copy.</strong><span>Visual covering should not be trusted when underlying text can still be selected or extracted.</span></li><li><strong>Inspect hidden structures.</strong><span>A real workflow must also consider metadata, annotations, attachments, forms, layers, OCR, and other objects.</span></li><li><strong>Review the meaning.</strong><span>Absence of these two canaries does not prove that every sensitive fact is gone.</span></li></ol><a class="text-link" href="../redaction-verification-checklist.txt" download>Download the redaction verification checklist →</a></section>
+  <section class="resource-next"><div><p class="eyebrow light">Next step</p><h2>Apply the full upload decision.</h2><p>Check destination approval, data minimisation, hidden content, output usability, and human review.</p></div><a class="button button-light" data-cta="before-ai-checklist" data-page="pdf-redaction-demo" data-destination="before-ai-upload-checklist" href="../../checklists/before-ai-upload/">Open the full checklist</a></section>
+</div></section>
+  </main>
+<footer class="site-footer"><div class="shell footer-inner"><a class="brand footer-brand" href="../../"><span class="brand-mark" aria-hidden="true"><span></span></span><span>FilePreflight</span></a><p>© 2026 FilePreflight</p><div class="footer-links"><a href="../../#privacy">Privacy</a><a href="../../ai-document-sanitizer/">AI Sanitizer</a><a href="../../evidence/">Evidence</a><a href="../../guides/">Guides</a><a href="mailto:contact@ai-labs.co.jp">Contact</a><a href="https://www.ai-labs.co.jp/products/filepreflight">Developed by AI Labs LLC</a></div></div></footer>
+</body>
+</html>

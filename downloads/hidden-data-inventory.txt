@@ -1,0 +1,33 @@
+FILEPREFLIGHT — CROSS-FORMAT HIDDEN-DATA INVENTORY
+
+PDF
+- Document properties and XMP metadata
+- Comments, annotations, form values, attachments, layers, scripts, and embedded files
+- Text hidden by shapes, crops, clipping, or visual overlays
+- OCR text and page-image content
+
+WORD / DOCX
+- Properties, authors, template references, comments, tracked changes, headers, footers, and hidden text
+- Embedded objects, links, relationship parts, custom XML, and filenames
+
+EXCEL / XLSX
+- Hidden sheets, rows, columns, formulas, defined names, comments, connections, pivot caches, charts, and properties
+- External workbook paths, queries, embedded objects, and filenames
+
+POWERPOINT / PPTX
+- Speaker notes, hidden slides, comments, off-slide objects, properties, links, and embedded media or files
+
+JPEG / PNG
+- EXIF, XMP, IPTC, GPS, device information, thumbnails, and visible text in pixels
+
+TEXT / DATA / CONFIG
+- Credentials, tokens, connection strings, internal URLs, identifiers, comments, fields, filenames, and encoding artifacts
+- Relationships between otherwise ordinary fields that can re-identify a subject
+
+FINAL CHECK
+[ ] Use the minimum useful copy.
+[ ] Inspect both visible content and applicable hidden structures.
+[ ] Close and reopen the exact output.
+[ ] Search, extract, and visually review again.
+[ ] Confirm useful content and file behavior remain intact.
+[ ] Obtain required human and destination approval.

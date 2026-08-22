@@ -1,0 +1,33 @@
+FILEPREFLIGHT — BEFORE-AI UPLOAD CHECKLIST
+
+DECISION GATES
+[ ] The exact AI service, workspace, account, feature, and organisational use are approved.
+[ ] The file is the minimum useful copy for the stated task.
+[ ] A responsible person reviewed the exact output.
+
+PURPOSE AND DESTINATION
+[ ] The task is written in one sentence.
+[ ] Training, retention, administrator access, connectors, and contract were checked.
+[ ] Client, legal, security, records, and sector rules are satisfied.
+
+MINIMUM USEFUL COPY
+[ ] The original is preserved and will not be uploaded by mistake.
+[ ] Unnecessary pages, sheets, rows, columns, fields, attachments, and precision are removed.
+[ ] Direct identifiers are removed or replaced consistently.
+[ ] Indirect identifiers were assessed together for re-identification risk.
+
+VISIBLE AND HIDDEN DATA
+[ ] Redaction removed underlying content; it did not merely cover it.
+[ ] Properties, comments, revisions, notes, hidden content, attachments, and embedded objects were inspected.
+[ ] Credentials, tokens, connection strings, internal URLs, and filenames were checked.
+[ ] Scans and images received a visual review; metadata and OCR limits were considered.
+
+FINAL VERIFICATION
+[ ] The exact copy was closed, reopened, and searched again.
+[ ] Redacted areas do not reveal source text through selection, copy, or extraction.
+[ ] Required content, formulas, references, layout, and meaning still work.
+[ ] A responsible person approved the exact file and destination.
+
+If any gate is unknown or fails, do not upload. Use a synthetic example, an approved controlled environment, or no file.
+
+General risk-reduction guidance only; not legal, compliance, or security advice.

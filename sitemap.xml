@@ -2,91 +2,109 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://filepreflight.ai-labs.co.jp/</loc>
-    <lastmod>2026-08-21</lastmod>
+    <lastmod>2026-08-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://filepreflight.ai-labs.co.jp/ja/</loc>
-    <lastmod>2026-08-21</lastmod>
+    <lastmod>2026-08-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://filepreflight.ai-labs.co.jp/ai-document-sanitizer/</loc>
-    <lastmod>2026-08-21</lastmod>
+    <lastmod>2026-08-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.95</priority>
   </url>
   <url>
     <loc>https://filepreflight.ai-labs.co.jp/guides/</loc>
-    <lastmod>2026-08-21</lastmod>
+    <lastmod>2026-08-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
+    <loc>https://filepreflight.ai-labs.co.jp/evidence/</loc>
+    <lastmod>2026-08-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://filepreflight.ai-labs.co.jp/checklists/before-ai-upload/</loc>
+    <lastmod>2026-08-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://filepreflight.ai-labs.co.jp/downloads/pdf-redaction-demo/</loc>
+    <lastmod>2026-08-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
     <loc>https://filepreflight.ai-labs.co.jp/guides/is-it-safe-to-upload-confidential-documents-to-chatgpt/</loc>
-    <lastmod>2026-08-21</lastmod>
+    <lastmod>2026-08-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://filepreflight.ai-labs.co.jp/guides/redact-sensitive-information-before-chatgpt/</loc>
-    <lastmod>2026-08-21</lastmod>
+    <lastmod>2026-08-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://filepreflight.ai-labs.co.jp/guides/anonymize-company-data-before-ai/</loc>
-    <lastmod>2026-08-21</lastmod>
+    <lastmod>2026-08-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://filepreflight.ai-labs.co.jp/guides/anonymize-excel-data-before-ai/</loc>
-    <lastmod>2026-08-21</lastmod>
+    <loc>https://filepreflight.ai-labs.co.jp/sanitize-excel-before-ai-analysis/</loc>
+    <lastmod>2026-08-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://filepreflight.ai-labs.co.jp/guides/remove-hidden-data-and-metadata-before-ai/</loc>
+    <lastmod>2026-08-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://filepreflight.ai-labs.co.jp/guides/remove-hidden-data-metadata-before-ai/</loc>
-    <lastmod>2026-08-21</lastmod>
+    <loc>https://filepreflight.ai-labs.co.jp/offline-document-redaction-tool/</loc>
+    <lastmod>2026-08-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://filepreflight.ai-labs.co.jp/sanitize-pdf-before-chatgpt/</loc>
+    <lastmod>2026-08-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://filepreflight.ai-labs.co.jp/document-privacy-scanner/</loc>
+    <lastmod>2026-08-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://filepreflight.ai-labs.co.jp/guides/best-offline-document-redaction-tools-for-ai/</loc>
+    <lastmod>2026-08-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://filepreflight.ai-labs.co.jp/guides/offline-document-redaction-tool/</loc>
-    <lastmod>2026-08-21</lastmod>
+    <loc>https://filepreflight.ai-labs.co.jp/legal-document-redaction-for-ai/</loc>
+    <lastmod>2026-08-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://filepreflight.ai-labs.co.jp/guides/redact-sanitize-pdf-before-chatgpt/</loc>
-    <lastmod>2026-08-21</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://filepreflight.ai-labs.co.jp/guides/document-privacy-scanner/</loc>
-    <lastmod>2026-08-21</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://filepreflight.ai-labs.co.jp/guides/best-offline-document-redaction-tools/</loc>
-    <lastmod>2026-08-21</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://filepreflight.ai-labs.co.jp/guides/legal-document-redaction-before-ai/</loc>
-    <lastmod>2026-08-21</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://filepreflight.ai-labs.co.jp/guides/remove-api-keys-before-ai-coding-tools/</loc>
-    <lastmod>2026-08-21</lastmod>
+    <loc>https://filepreflight.ai-labs.co.jp/remove-api-keys-secrets-before-ai/</loc>
+    <lastmod>2026-08-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>

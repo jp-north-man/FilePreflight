@@ -3,106 +3,19 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="A response-first workflow for finding credentials in code, configuration, logs, notebooks, and history—and rotating anything already exposed." />
-  <meta name="theme-color" content="#0b1020" />
-  <meta name="robots" content="index, follow" />
-  <meta property="og:type" content="article" />
-  <meta property="og:site_name" content="FilePreflight" />
-  <meta property="og:title" content="Remove API Keys, Credentials, and Secrets Before Using AI Coding Tools" />
-  <meta property="og:description" content="A response-first workflow for finding credentials in code, configuration, logs, notebooks, and history—and rotating anything already exposed." />
-  <meta property="og:url" content="https://filepreflight.ai-labs.co.jp/guides/remove-api-keys-before-ai-coding-tools/" />
-  <meta property="og:image" content="https://filepreflight.ai-labs.co.jp/og.png" />
-  <meta property="og:locale" content="en_US" />
-  <meta property="article:published_time" content="2026-08-19" />
-  <meta property="article:modified_time" content="2026-08-21" />
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Remove API Keys, Credentials, and Secrets Before Using AI Coding Tools" />
-  <meta name="twitter:description" content="A response-first workflow for finding credentials in code, configuration, logs, notebooks, and history—and rotating anything already exposed." />
-  <meta name="twitter:image" content="https://filepreflight.ai-labs.co.jp/og.png" />
-  <link rel="canonical" href="https://filepreflight.ai-labs.co.jp/guides/remove-api-keys-before-ai-coding-tools/" />
-  <link rel="alternate" hreflang="en" href="https://filepreflight.ai-labs.co.jp/guides/remove-api-keys-before-ai-coding-tools/" />
-  <link rel="alternate" hreflang="x-default" href="https://filepreflight.ai-labs.co.jp/guides/remove-api-keys-before-ai-coding-tools/" />
+  <meta name="description" content="This FilePreflight page has moved to its permanent URL." />
+  <meta name="robots" content="noindex, follow" />
+  <meta http-equiv="refresh" content="0; url=/remove-api-keys-secrets-before-ai/" />
+  <link rel="canonical" href="https://filepreflight.ai-labs.co.jp/remove-api-keys-secrets-before-ai/" />
   <link rel="stylesheet" href="../../styles.css" />
-  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Article","headline":"Remove API Keys, Credentials, and Secrets Before Using AI Coding Tools","description":"A response-first workflow for finding credentials in code, configuration, logs, notebooks, and history—and rotating anything already exposed.","datePublished":"2026-08-19","dateModified":"2026-08-21","inLanguage":"en","mainEntityOfPage":"https://filepreflight.ai-labs.co.jp/guides/remove-api-keys-before-ai-coding-tools/","author":{"@type":"Organization","name":"AI Labs LLC","url":"https://www.ai-labs.co.jp/"},"publisher":{"@type":"Organization","name":"AI Labs LLC","url":"https://www.ai-labs.co.jp/"},"citation":["https://docs.github.com/en/code-security/reference/secret-security/secret-scanning-scope","https://docs.github.com/en/code-security/reference/secret-security/supported-secret-scanning-patterns","https://docs.github.com/en/code-security/how-tos/manage-security-alerts/manage-secret-scanning-alerts/resolving-alerts","https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/removing-sensitive-data-from-a-repository","https://help.openai.com/en/articles/5112595-best-practices-for-api-key-safety"]},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"FilePreflight","item":"https://filepreflight.ai-labs.co.jp/"},{"@type":"ListItem","position":2,"name":"Guides","item":"https://filepreflight.ai-labs.co.jp/guides/"},{"@type":"ListItem","position":3,"name":"Remove API Keys, Credentials, and Secrets Before Using AI Coding Tools","item":"https://filepreflight.ai-labs.co.jp/guides/remove-api-keys-before-ai-coding-tools/"}]}]}</script>
-  <title>Remove API Keys, Credentials, and Secrets Before Using AI Coding Tools | FilePreflight Guides</title>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"Remove API Keys, Credentials, and Secrets Before Using AI Coding Tools","url":"https://filepreflight.ai-labs.co.jp/remove-api-keys-secrets-before-ai/","isPartOf":{"@type":"WebSite","name":"FilePreflight","url":"https://filepreflight.ai-labs.co.jp/"}}</script>
+  <title>Remove API Keys, Credentials, and Secrets Before Using AI Coding Tools | FilePreflight</title>
 </head>
-<body>
-  <a class="skip-link" href="#main">Skip to content</a>
-<header class="site-header">
-  <div class="shell header-inner">
-    <a class="brand" href="../../" aria-label="FilePreflight home">
-      <span class="brand-mark" aria-hidden="true"><span></span></span><span>FilePreflight</span>
-    </a>
-    <nav class="desktop-nav" aria-label="Primary navigation">
-      <a href="../../">Product</a>
-      <a href="../../ai-document-sanitizer/">AI Sanitizer</a>
-      <a href="../../guides/">Guides</a>
-      <a href="../../#privacy">Privacy</a>
-      <a href="https://github.com/jp-north-man/FilePreflight" target="_blank" rel="noopener noreferrer">GitHub</a>
-    </nav>
-    <div class="language-switch" aria-label="Language">
-      <a href="../../ja/" lang="ja">日本語</a>
-      <a href="./" aria-current="page">EN</a>
-    </div>
-  </div>
-</header>
-  <main id="main">
-    <section class="guide-hero">
-      <div class="hero-glow hero-glow-one" aria-hidden="true"></div>
-      <div class="guide-hero-inner">
-        <nav class="breadcrumb" aria-label="Breadcrumb"><a href="../../">FilePreflight</a><span aria-hidden="true">/</span><a href="../">Guides</a><span aria-hidden="true">/</span><span>Remove API keys and secrets</span></nav>
-        <p class="eyebrow light">Code &amp; secrets</p>
-        <h1>Remove API Keys, Credentials, and Secrets Before Using AI Coding Tools</h1>
-        <p class="hero-lede">A response-first workflow for finding credentials in code, configuration, logs, notebooks, and history—and rotating anything already exposed.</p>
-        <div class="guide-meta"><span>Published August 19, 2026</span><span>8 min read</span><span>Reviewed against official sources</span></div>
-      </div>
-    </section>
-    <div class="guide-article-wrap">
-      <article class="guide-article">
-        <aside class="guide-summary"><strong>In brief</strong><p>Before sharing code with AI, minimise the files, scan supported and custom patterns, replace secrets with inert placeholders, and review the result. If a live secret was already exposed, revoke or rotate it first; deleting the string is not enough.</p></aside>
-<aside class="guide-warning"><strong>Important boundary</strong><p>Treat an exposed live credential as compromised. Revoke or rotate it, review usage logs and related access, then remove it from current files and history as required.</p></aside>
-<section><h2>Secrets appear outside source files</h2><p>API keys, access tokens, private keys, passwords, connection strings, webhook secrets, session values, certificates, and signed URLs can appear in more places than the code being discussed.</p>
-<p>Review <code>.env</code> files, configuration, deployment manifests, CI logs, shell history, notebooks, test fixtures, screenshots, stack traces, copied terminal output, generated artefacts, build folders, documentation, and sample requests. A small code excerpt can include a live value in a comment or error message.</p>
-<p>Also check filenames, repository URLs, internal hostnames, tenant IDs, customer data, and security findings. These may not be credentials but can still be inappropriate for the selected AI tool.</p></section>
-<section><h2>If exposure already happened, contain it first</h2><ol><li><strong>Revoke or rotate the credential.</strong> Use the provider's controls; do not wait for repository cleanup.</li><li><strong>Review use.</strong> Check audit, access, billing, and security logs for unexpected activity.</li><li><strong>Limit related access.</strong> Review permissions, sessions, derived tokens, and dependent systems.</li><li><strong>Notify the right people.</strong> Follow the organisation's incident and legal procedures.</li><li><strong>Then remove the value.</strong> Clean the current file, repository history, artefacts, caches, and other copies as appropriate.</li></ol>
-<p>GitHub's guidance stresses that removing a secret from the latest commit does not remove it from history, clones, forks, cached views, or pull-request references. Rotation changes what an attacker can do; text removal alone does not.</p></section>
-<section><h2>Create the minimum code bundle</h2><p>Share only the files and lines required to explain the problem. Exclude environment files, lock down logs, and replace live configuration with a small synthetic example. Avoid uploading an entire repository when one function and an invented input reproduce the issue.</p>
-<p>Use explicit inert placeholders that preserve syntax, such as <code>OPENAI_API_KEY=REDACTED_TEST_VALUE</code> or <code>postgresql://USER:PASSWORD@HOST/DB</code>. Do not use a truncated live key or a reversible encoding as a sample.</p>
-<p>OpenAI's API-key safety guidance recommends keeping keys out of client-side environments and source repositories, using environment variables, and monitoring usage. The same principles apply before code is copied into an AI conversation.</p></section>
-<section><h2>Scan supported and organisation-specific patterns</h2><p>Secret scanners recognise known provider formats and sometimes validate whether a credential is active. Coverage is not complete. Internal tokens, database passwords, proprietary headers, short secrets, and values split across files may not match a public pattern.</p>
-<p>Add custom patterns for organisation-specific prefixes and configuration conventions. Search for variable names such as <code>password</code>, <code>secret</code>, <code>token</code>, <code>private_key</code>, and <code>connection_string</code>, then review the assigned values and surrounding context.</p>
-<p>Do not copy detected live secrets into a report or prompt. A finding can be shown by category, file, line, and a safely truncated fingerprint that is not usable as authentication.</p></section>
-<section><h2>Check history and generated output</h2><div class="guide-table-wrap"><table class="guide-table"><thead><tr><th>Location</th><th>Question</th></tr></thead><tbody><tr><td>Working tree</td><td>Are secrets present in tracked, untracked, ignored, or hidden files?</td></tr><tr><td>Git history</td><td>Did an earlier commit contain the value even if the current file does not?</td></tr><tr><td>Pull requests and forks</td><td>Do diffs, reviews, patches, or copies still expose it?</td></tr><tr><td>Logs and notebooks</td><td>Was the value printed in output cells, traces, or command history?</td></tr><tr><td>Build and deployment artefacts</td><td>Was configuration bundled into an archive, image, source map, or generated file?</td></tr><tr><td>Prompt attachments</td><td>Does the final upload bundle contain excluded or duplicate files?</td></tr></tbody></table></div></section>
-<section><h2>Final pre-upload checklist</h2><ul><li>Only the minimum reproducing code and synthetic input are included.</li><li>Environment, configuration, logs, notebooks, images, and generated artefacts were reviewed.</li><li>Known provider patterns and organisation-specific patterns were scanned.</li><li>Live values were replaced with inert, non-reversible placeholders.</li><li>The exact bundle was re-scanned after transformation.</li><li>The AI coding service, account, workspace, retention, and policy are approved.</li><li>Any previously exposed secret was revoked or rotated and investigated.</li></ul></section>
-        <section class="guide-sources">
-          <h2>Official sources</h2>
-          <p class="guide-disclosure">This guide uses primary sources available on August 19, 2026. Product policies and software features can change, so confirm current terms before handling sensitive material.</p>
-          <ul><li><a href="https://docs.github.com/en/code-security/reference/secret-security/secret-scanning-scope" target="_blank" rel="noopener noreferrer">Secret scanning scope</a> — GitHub Docs</li>
-<li><a href="https://docs.github.com/en/code-security/reference/secret-security/supported-secret-scanning-patterns" target="_blank" rel="noopener noreferrer">Supported secret scanning patterns</a> — GitHub Docs</li>
-<li><a href="https://docs.github.com/en/code-security/how-tos/manage-security-alerts/manage-secret-scanning-alerts/resolving-alerts" target="_blank" rel="noopener noreferrer">Resolving alerts from secret scanning</a> — GitHub Docs</li>
-<li><a href="https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/removing-sensitive-data-from-a-repository" target="_blank" rel="noopener noreferrer">Removing sensitive data from a repository</a> — GitHub Docs</li>
-<li><a href="https://help.openai.com/en/articles/5112595-best-practices-for-api-key-safety" target="_blank" rel="noopener noreferrer">Best practices for API key safety</a> — OpenAI Help Center</li></ul>
-        </section>
-        <aside class="guide-note"><strong>About FilePreflight</strong><p>FilePreflight is a Windows file-preparation product being developed by AI Labs LLC. The initial release is not yet available. Planned capabilities and limits may change, and automated detection remains best-effort. <a href="../../ai-document-sanitizer/">Explore the AI document sanitizer workflow</a>.</p></aside>
-<nav class="guide-pagination" aria-label="Guide navigation">
-<a href="../legal-document-redaction-before-ai/">← Legal document redaction</a>
-<a href="../">All guides →</a>
-</nav>
-      </article>
-    </div>
+<body class="redirect-page">
+  <main>
+    <a class="brand" href="../../"><span class="brand-mark" aria-hidden="true"><span></span></span><span>FilePreflight</span></a>
+    <h1>This page has moved.</h1>
+    <p>Continue to <a href="/remove-api-keys-secrets-before-ai/">Remove API Keys, Credentials, and Secrets Before Using AI Coding Tools</a>.</p>
   </main>
-<footer class="site-footer">
-  <div class="shell footer-inner">
-    <a class="brand footer-brand" href="../../"><span class="brand-mark" aria-hidden="true"><span></span></span><span>FilePreflight</span></a>
-    <p>© 2026 FilePreflight</p>
-    <div class="footer-links">
-      <a href="../../#privacy">Privacy</a>
-      <a href="../../ai-document-sanitizer/">AI Sanitizer</a>
-      <a href="../../guides/">Guides</a>
-      <a href="https://github.com/jp-north-man/FilePreflight" target="_blank" rel="noopener noreferrer">GitHub</a>
-      <a href="https://www.ai-labs.co.jp/products/filepreflight">Developed by AI Labs LLC</a>
-    </div>
-  </div>
-</footer>
 </body>
 </html>
