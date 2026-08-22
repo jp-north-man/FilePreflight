@@ -75,6 +75,10 @@ for (const file of htmlFiles) {
   if (Boolean(expectedRedirect) !== isRedirect) fail(label + ": redirect classification is incorrect");
   if (!/<html lang="(?:en|ja)">/.test(source)) fail(label + ": missing supported html lang");
   if (!/<h1(?:\s[^>]*)?>[\s\S]*?<\/h1>/.test(source)) fail(label + ": missing h1");
+  if (!source.includes('<link rel="icon" href="/favicon.ico" sizes="any" />')) fail(label + ": missing ICO favicon link");
+  if (!source.includes('<link rel="icon" href="/favicon.svg" type="image/svg+xml" />')) fail(label + ": missing SVG favicon link");
+  if (!source.includes('<link rel="icon" href="/favicon-96x96.png" type="image/png" sizes="96x96" />')) fail(label + ": missing 96px favicon link");
+  if (!source.includes('<link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180" />')) fail(label + ": missing Apple touch icon link");
   const title = textContent(source.match(/<title>([^<]+)<\/title>/)?.[1] || "");
   if (!title) fail(label + ": missing title");
   if (!isRedirect && title.length > 65) fail(label + ": title exceeds 65 characters (" + title.length + ")");
@@ -198,6 +202,30 @@ const requiredDownloads = [
 ];
 for (const path of requiredDownloads) {
   if (!await exists(join(root, path))) fail("Missing support asset " + path);
+}
+
+const requiredIcons = ["favicon.ico", "favicon.svg", "favicon-96x96.png", "apple-touch-icon.png"];
+for (const path of requiredIcons) {
+  if (!await exists(join(root, path))) fail("Missing site icon " + path);
+}
+
+if (await exists(join(root, "favicon-96x96.png"))) {
+  const png = await readFile(join(root, "favicon-96x96.png"));
+  if (png.subarray(0, 8).toString("hex") !== "89504e470d0a1a0a" || png.readUInt32BE(16) !== 96 || png.readUInt32BE(20) !== 96) {
+    fail("favicon-96x96.png must be a valid 96x96 PNG");
+  }
+}
+if (await exists(join(root, "apple-touch-icon.png"))) {
+  const png = await readFile(join(root, "apple-touch-icon.png"));
+  if (png.subarray(0, 8).toString("hex") !== "89504e470d0a1a0a" || png.readUInt32BE(16) !== 180 || png.readUInt32BE(20) !== 180) {
+    fail("apple-touch-icon.png must be a valid 180x180 PNG");
+  }
+}
+if (await exists(join(root, "favicon.ico"))) {
+  const ico = await readFile(join(root, "favicon.ico"));
+  if (ico.subarray(0, 6).toString("hex") !== "000001000100" || ico.readUInt8(6) !== 64 || ico.readUInt8(7) !== 64) {
+    fail("favicon.ico must contain a 64x64 icon");
+  }
 }
 
 const expectedHashes = new Map([
