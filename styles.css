@@ -583,6 +583,78 @@ h2 {
   gap: 18px;
 }
 
+.product-screenshot {
+  width: min(1040px, 100%);
+  margin: 42px auto 28px;
+}
+
+.product-screenshot-frame {
+  display: block;
+  overflow: hidden;
+  aspect-ratio: 16 / 9;
+  background: #dfe2e7;
+  border: 1px solid rgba(11, 16, 32, 0.14);
+  border-radius: 24px;
+  box-shadow: 0 26px 65px rgba(11, 16, 32, 0.16);
+  transition: transform 180ms ease, box-shadow 180ms ease;
+}
+
+.product-screenshot-frame:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 30px 74px rgba(11, 16, 32, 0.2);
+}
+
+.product-screenshot-frame:focus-visible {
+  outline: 3px solid var(--amber);
+  outline-offset: 4px;
+}
+
+.product-screenshot-frame img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.product-screenshot figcaption {
+  margin: 16px auto 0;
+  color: var(--ink-soft);
+  font-size: 14px;
+  text-align: center;
+}
+
+.product-screenshot figcaption strong {
+  color: var(--ink);
+}
+
+.product-screenshot figcaption span {
+  white-space: nowrap;
+}
+
+.product-screenshot figcaption a {
+  color: inherit;
+  font-weight: 760;
+  text-underline-offset: 3px;
+}
+
+.product-screenshot-dark {
+  margin-top: 38px;
+}
+
+.product-screenshot-dark .product-screenshot-frame {
+  border-color: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 28px 72px rgba(0, 0, 0, 0.34);
+}
+
+.product-screenshot-dark figcaption {
+  color: rgba(255, 255, 255, 0.68);
+}
+
+.product-screenshot-dark figcaption strong,
+.product-screenshot-dark figcaption a {
+  color: #fff;
+}
+
 .step-card {
   position: relative;
   overflow: hidden;
@@ -3329,6 +3401,21 @@ h2 {
 
   .c01-header-cta {
     display: none;
+  }
+}
+
+@media (max-width: 640px) {
+  .product-screenshot {
+    margin-top: 30px;
+  }
+
+  .product-screenshot-frame {
+    aspect-ratio: 1;
+    border-radius: 16px;
+  }
+
+  .product-screenshot figcaption {
+    text-align: left;
   }
 }
 
